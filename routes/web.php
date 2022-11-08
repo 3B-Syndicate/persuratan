@@ -23,6 +23,9 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        // return view('dashboard');
+        return view('superadmin.index');
     })->name('dashboard');
 });
+
+// Route::get('/superadmin/logout',[AdminController::class, 'logout'])->name('superadmin.logout');
