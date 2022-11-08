@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="nav-item fixed-bottom">
-            <a href="#" class="nav-link bg-secondary" style="margin-left: 5px;">
+            <a href="#" class="nav-link bg-secondary" style="margin-left: 6px;">
               <p>Logout</p>
             </a>
           </li>

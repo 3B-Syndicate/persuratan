@@ -40,7 +40,6 @@
   @yield('superadmin')
   <!-- /.content-wrapper -->
   
-  @include('superadmin.body.footer')
   <!-- Control Sidebar -->
   
   <!-- /.control-sidebar -->

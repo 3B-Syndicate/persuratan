@@ -1,8 +1,8 @@
 @extends('superadmin.superadmin_master')
 @section('superadmin')
-<div class="content-wrapper" style="background: black;">
+<div class="content-wrapper" style="background: yellow;">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    <div class="content-header" style="background: black;">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -14,7 +14,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content" style="background: black;">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
@@ -26,9 +26,6 @@
 
                 <p>Jumlah User</p>
               </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
@@ -36,15 +33,7 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
-        <div class="row">
-          <!-- col -->
-          <section class="col-lg-12 col-12" style="background: yellow;">
-            <!-- Custom tabs (Charts with tabs)-->
-            <div class="card">
-            </div>
-            <!-- /.card -->
-
-          </section>
+        
         </div>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
