@@ -33,21 +33,23 @@
                                         <th style="width: 10px">No</th>
                                         <th>Nama User</th>
                                         <th>Roles</th>
+                                        <th>Email</th>
                                         <th>Aksi</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($allDataUser as $key => $user)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->roles}}</td>
+                                        <td>{{$user->usertype}}</td>
+                                        <td>{{$user->usertype}}</td>
+                                        <td>{{$user->email}}</td>
                                         <td>
-                                            <a href="{{route('user.edit', $user->id)}}" class="btn btn-info">Edit</a>
-                                            <a href="{{route('user.delete', $user->id)}}" id="delete"
+                                            <a href="{{route('users.edit', $user->id)}}" class="btn btn-info">Edit</a>
+                                            <a href="{{route('users.delete', $user->id)}}" id="delete"
                                                 class="btn btn-danger">Delete</a>
                                         </td>
-
                                     </tr>
                                     @endforeach
                                 </tbody>

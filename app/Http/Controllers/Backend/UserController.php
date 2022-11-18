@@ -10,55 +10,66 @@ class UserController extends Controller
 {
     //
     public function UserView(){
-        $data['allDataUser']=User::all();
-        return view('superadmin.table_user', $data);
+       $data['allDataUser']=User::all();
+       return view('superadmin.table_user', $data);
     }
-
     public function UserAdd(){
-        return view('backend.user.add_user');
-    }
-
-    public function UserStore(Request $request){
+        //$data['allDataUser']=User::all();
+        return view('superadmin.create_user');
+     }
+     public function UserStore(Request $request){
+        
         $validatedData=$request->validate([
-            'email' => 'required|unique:users',
-            'textName' => 'required',
+           'email' => 'required|unique:users',
+           'textNama' => 'required',
         ]);
-
+        
         $data=new User();
-        $data->usertype=$request->usertype;
-        $data->name=$request->textName;
+        $data->usertype=$request->selectUser;
+        $data->name=$request->textNama;
         $data->email=$request->email;
         $data->password=bcrypt($request->password);
-        $data->save();
-
-        return redirect()->route('user.view')->with('info','Data added Successfully');
-    }
-
-    public function UserEdit($id){
-        $editData= User::find($id);
-        return view('backend.user.edit_user', compact('editData'));
-    }
-
-    public function UserUpdate(Request $request, $id){
-        $validatedData=$request->validate([
-            'email' => 'required|unique:users',
-            'textName' => 'required',
-        ]);
-
-        $data=User::find($id);
-        $data->usertype=$request->usertype;
-        $data->name=$request->textName;
-        $data->email=$request->email;
         
         $data->save();
 
-        return redirect()->route('user.view')->with('info','Update Data Successfully');
+       
+
+        return redirect()->route('user.view')->with('info','Data added Successfully');
+
+}
+   public function UserEdit($id){
+        //dd('berhasil masuk edit');
+
+        $editData = User::find($id);
+        return view('backend.user.edit_user', compact('editData'));
+    }
+
+    public function UsersUpdate(Request $request, $id){
+        $validatedData=$request->validate([
+            'email' =>'required|unique:users',
+            'textNama' =>'required',
+        ]);
+        
+        $data=User::find($id);
+        $data->usertype=$request->selectUser;
+        $data->name=$request->textNama;
+        $data->email=$request->email;
+        $data->hp=$request->textHP;
+        // if($request->password!=""){
+        //     $data->password=bcrypt($request->password);
+        // }
+        $data->save();
+
+        return redirect()->route('user.view')->with('info','Update user berhasil');
     }
 
     public function UserDelete($id){
-        $deleteData= User::find($id);
+        //dd('berhasil masuk edit');
+
+        $deleteData = User::find($id);
         $deleteData->delete();
 
-        return redirect()->route('user.view')->with('info','Delete Data Successfully');
+
+        return redirect()->route('user.view')->with('info','Delete user berhasil');
     }
 }

@@ -35,10 +35,10 @@ Route::middleware([
 Route::get('/superadmin/logout',[AdminController::class, 'logout'])->name('superadmin.logout');
 
 Route::prefix('super')->group(function(){
-    Route::get('/view',[UserController::class,'UserView'])->name('user.view');
-    Route::get('/add',[UserController::class,'UserAdd'])->name('user.add');
-    Route::post('/store',[UserController::class,'UserStore'])->name('user.store');
-    Route::get('/edit/{id}',[UserController::class,'UserEdit'])->name('user.edit');
-    Route::post('/update/{id}',[UserController::class,'UserUpdate'])->name('user.update');
-    Route::get('/delete/{id}',[UserController::class,'UserDelete'])->name('user.delete');
-});
+    Route::get('/view',[UserController::class, 'UserView'])->name('user.view');
+    Route::get('/add',[UserController::class, 'UserAdd'])->name('user.add'); 
+    Route::post('/store',[UserController::class, 'UserStore'])->name('users.store'); 
+    Route::get('/edit/{id}',[UserController::class, 'UserEdit'])->name('users.edit');
+    Route::post('/update/{id}',[UserController::class, 'UsersUpdate'])->name('users.update');
+    Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
+    });
