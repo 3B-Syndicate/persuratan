@@ -33,9 +33,6 @@
   
   <!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  @include('superadmin.body.sidebar')
-
   <!-- Content Wrapper. Contains page content -->
   @yield('superadmin')
   <!-- /.content-wrapper -->
