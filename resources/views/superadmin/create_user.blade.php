@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                <h1 class="content" style="text-colour: black;">Jumlah User</h1> 
+                <h1 class="content" style="text-colour: black;">Tambah User</h1> 
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -28,30 +28,31 @@
                                         aria-label="Default select example">
                                         <option selected="">Pilih Roles </option>
                                         <option value="admin">Super Admin</option>
-                                        <option value="Admin Jurusan">Admin Jurusan</option>
-                                        <option value="Kajur">Kajur</option>
-                                        <option value="Kaprodi">Kaprodi</option>
-                                        <option value="Dosen">Dosen</option>
+                                        <option value="admin_jurusan">Admin Jurusan</option>
+                                        <option value="kajur">Kajur</option>
+                                        <option value="kaprodi">Kaprodi</option>
+                                        <option value="dosen">Dosen</option>
                                     </select>
+                                    <span class="text-danger text-bold">*</span> (<span class="text-warning text-bold">Wajib dipilih salah satu!</span>)
                                     <div class="row">
                                         <div class="col">
-                                            <label for="exampleInputEmail1" class="form-label">UserName</label> 
+                                            <label for="exampleInputName" class="form-label">Username</label> 
                                             <div>
                                                 <input type="text" name="textNama" class="form-control"
                                                     placeholder="Nama User" aria-label="textNama"
-                                                    aria-describedby="basic-addon1">
+                                                    aria-describedby="basic-addon1" required>
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="mb-3">
                                                             <label for="exampleInputEmail1" class="form-label">Email
                                                             </label>
                                                             <input type="email" name="email" class="form-control"
-                                                                id="email" aria-describedby="emailHelp">
+                                                                id="email" aria-describedby="emailHelp" required>
                                                         </div>
                                                         <div class="mb-3">
                                                             <label for="password" class="form-label">Password</label>
                                                             <input type="password" class="form-control" name="password"
-                                                                id="password">
+                                                                id="password" required>
                                                         </div>
                                                     </div>
                                                 </div>

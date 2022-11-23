@@ -9,9 +9,7 @@
                     <h1 class="m-0 text-light">Jumlah User</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
-                    <a href="{{route('user.add')}}" style="float:right;
-                                position: relative;
-                                color: black" class="btn btn-mini btn-warning">Add User</a>
+                    <a href="{{route('user.add')}}" style="float:right; position: relative; color: black" class="btn btn-mini btn-warning">Tambah User</a>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -30,7 +28,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th style="width: 10px">No</th>
+                                        <th style="width: 10px;">No</th>
                                         <th>Nama User</th>
                                         <th>Roles</th>
                                         <th>Email</th>
@@ -42,7 +40,7 @@
                                     @foreach($allDataUser as $key => $user)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td>{{$user->usertype}}</td>
+                                        <td>{{$user->name}}</td>
                                         <td>{{$user->usertype}}</td>
                                         <td>{{$user->email}}</td>
                                         <td>

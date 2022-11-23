@@ -25,10 +25,11 @@ class UserController extends Controller
         ]);
         
         $data=new User();
-        $data->usertype=$request->selectUser;
+
         $data->name=$request->textNama;
         $data->email=$request->email;
         $data->password=bcrypt($request->password);
+        $data->usertype=$request->selectUser;
         
         $data->save();
 
@@ -41,10 +42,10 @@ class UserController extends Controller
         //dd('berhasil masuk edit');
 
         $editData = User::find($id);
-        return view('backend.user.edit_user', compact('editData'));
+        return view('superadmin.edit_user', compact('editData'));
     }
 
-    public function UsersUpdate(Request $request, $id){
+    public function UserUpdate(Request $request, $id){
         $validatedData=$request->validate([
             'email' =>'required|unique:users',
             'textNama' =>'required',
@@ -54,7 +55,7 @@ class UserController extends Controller
         $data->usertype=$request->selectUser;
         $data->name=$request->textNama;
         $data->email=$request->email;
-        $data->hp=$request->textHP;
+        // $data->hp=$request->textHP;
         // if($request->password!=""){
         //     $data->password=bcrypt($request->password);
         // }
