@@ -28,7 +28,8 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         // return view('dashboard');
-        return view('superadmin.index');
+        // return view('superadmin.index');
+        return view('kaprodi.index');
     })->name('dashboard');
 });
 
