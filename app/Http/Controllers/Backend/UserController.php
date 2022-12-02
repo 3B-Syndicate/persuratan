@@ -13,11 +13,12 @@ class UserController extends Controller
        $data['allDataUser']=User::all();
        return view('superadmin.table_user', $data);
     }
+
     public function UserAdd(){
-        //$data['allDataUser']=User::all();
         return view('superadmin.create_user');
-     }
-     public function UserStore(Request $request){
+    }
+    
+    public function UserStore(Request $request){
         
         $validatedData=$request->validate([
            'email' => 'required|unique:users',
@@ -25,20 +26,19 @@ class UserController extends Controller
         ]);
         
         $data=new User();
-
         $data->name=$request->textNama;
         $data->email=$request->email;
         $data->password=bcrypt($request->password);
         $data->usertype=$request->selectUser;
-        
+        if ($request->textNama== "" or $request->email== "" or $request->password== "" or $request->selectUser== ""){
+            return redirect()->route('user.add')->with('info','tidak boleh ada kolom yang kosong');
+        }
         $data->save();
 
-       
-
         return redirect()->route('user.view')->with('info','Data added Successfully');
-
-}
-   public function UserEdit($id){
+    }
+   
+    public function UserEdit($id){
         //dd('berhasil masuk edit');
 
         $editData = User::find($id);
@@ -47,18 +47,15 @@ class UserController extends Controller
 
     public function UserUpdate(Request $request, $id){
         $validatedData=$request->validate([
-            'email' =>'required|unique:users',
-            'textNama' =>'required',
         ]);
         
         $data=User::find($id);
         $data->usertype=$request->selectUser;
         $data->name=$request->textNama;
         $data->email=$request->email;
-        // $data->hp=$request->textHP;
-        // if($request->password!=""){
-        //     $data->password=bcrypt($request->password);
-        // }
+        if($request->password!=""){
+            $data->password=bcrypt($request->password);
+        }
         $data->save();
 
         return redirect()->route('user.view')->with('info','Update user berhasil');
