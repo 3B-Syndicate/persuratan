@@ -37,7 +37,23 @@
             <a href="{{route('user.view')}}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
-                Jumlah User
+                Surat Masuk
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('user.view')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Surat Keluar
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('user.view')}}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Notulensi Rapat
               </p>
             </a>
           </li>
