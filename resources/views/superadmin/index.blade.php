@@ -1,6 +1,6 @@
 @extends('superadmin.superadmin_master')
 @section('superadmin')
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:black;">
+<aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{asset('assets/images/logo-TI_Poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -28,7 +28,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:yellow;">
+            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:lightgray;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -54,13 +54,13 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-<div class="content-wrapper" style="background: yellow;">
+<div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
-    <div class="content-header" style="background: black;">
+    <div class="content-header" style="background: #ffc107;">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-light">Dashboard</h1>
+            <h1 class="m-0 text-dark">Dashboard</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -68,13 +68,13 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content" style="background: black;">
+    <section class="content" style="background: #ffc107;">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
           <div class="col-lg-12 col-6">
             <!-- small box -->
-            <div class="small-box" style="background: yellow;">
+            <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>10</h3>
 

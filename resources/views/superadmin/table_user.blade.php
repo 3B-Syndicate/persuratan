@@ -1,6 +1,6 @@
 @extends('superadmin.superadmin_master')
 @section('superadmin')
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:black;">
+<aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{asset('assets/images/logo-TI_Poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:yellow;">
+            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgray;">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Jumlah User
@@ -54,16 +54,16 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-<div class="content-wrapper" style="background: yellow;">
+<div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
-    <div class="content-header" style="background: black;">
+    <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-light">Jumlah User</h1>
+                    <h1 class="m-0 text-dark">Jumlah User</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
-                    <a href="{{route('user.add')}}" style="float:right; position: relative; color: black" class="btn btn-mini btn-warning">Tambah User</a>
+                    <a href="{{route('user.add')}}" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah User</a>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -71,7 +71,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content" style="background: black;">
+    <section class="content" style="background: #ffc107;">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
