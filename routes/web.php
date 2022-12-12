@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\SuratMasukController;
+
 
 
 
@@ -42,4 +44,8 @@ Route::prefix('super')->group(function(){
     Route::get('/edit/{id}',[UserController::class, 'UserEdit'])->name('users.edit');
     Route::post('/update/{id}',[UserController::class, 'UsersUpdate'])->name('users.update');
     Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
-    });
+});
+Route::prefix('admin')->group(function(){
+    Route::get('/view',[SuratMasukController::class, 'SMView'])->name('admin.surat_masuk.table');
+
+});

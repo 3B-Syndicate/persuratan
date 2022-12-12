@@ -34,15 +34,30 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Masuk
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Surat Masuk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Surat Masuk</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Surat Keluar
@@ -50,7 +65,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Notulensi Rapat
