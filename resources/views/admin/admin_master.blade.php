@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Persuratan | Dashboard - KetuaProdi</title>
+  <title>Persuratan | Dashboard - Admin</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -34,10 +34,10 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('kaprodi.body.sidebar')
+  @include('admin.body.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
-  @yield('kaprodi')
+  @yield('admin')
   <!-- /.content-wrapper -->
 
 </div>
