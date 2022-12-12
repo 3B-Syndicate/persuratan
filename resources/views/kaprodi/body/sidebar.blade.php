@@ -27,7 +27,6 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:lightgrey;">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
@@ -35,7 +34,6 @@
           </li>
           <li class="nav-item">
             <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
               <p>
                 Surat Masuk
               </p>
@@ -43,7 +41,6 @@
           </li>
           <li class="nav-item">
             <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
               <p>
                 Surat Keluar
               </p>
@@ -51,7 +48,6 @@
           </li>
           <li class="nav-item">
             <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
               <p>
                 Notulensi Rapat
               </p>
