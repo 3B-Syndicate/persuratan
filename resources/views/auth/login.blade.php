@@ -14,8 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css')}}">
 </head>
-<body class="hold-transition login-page" style="background-color: yellow;">
-  <div></div>
+<body class="hold-transition login-page" style="background-color: #ffc107;">
   <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">

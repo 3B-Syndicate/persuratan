@@ -1,6 +1,5 @@
 @extends('admin.admin_master')
 @section('admin')
-
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -46,14 +45,14 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark active" style="background:lightgrey;">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark active" style="background:lightgrey;">
+                <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
-                  <i class="far fa-wrench nav-icon"></i>
+                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
+                <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
               </li>
@@ -96,7 +95,7 @@
                     <h1 class="m-0 text-dark">Surat Masuk</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
-                    <a href="#" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah Surat</a>
+                    <a href="{{route('admin.surat_masuk.create')}}" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah Surat</a>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -105,12 +104,10 @@
 
     <!-- Main content -->
     <section class="content" style="background: #ffc107;">
-        <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
+        <div class="container-fluid pt-4 px-4">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <!-- /.card-header -->
                         <div class="card-body">
                             <table class="table table-bordered">
                                 <thead>
@@ -138,7 +135,7 @@
                                         <td>Biasa</td>
                                         <td>1 Halaman</td>
                                         <td>
-                                            <a href="#" class="btn btn-success">
+                                            <a href="{{route('admin.surat_masuk.edit')}}" class="btn btn-success">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <a href="#" class="btn btn-danger">
@@ -146,7 +143,7 @@
                                             </a>
                                             <div class="btn btn-primary" data-toggle="dropdown">
                                                 <i class="fas fa-cog"></i>
-                                                <div class="dropdown-menu" style="margin-right:3%;">
+                                                <div class="dropdown-menu" style="margin-right:3%;padding:3px;">
                                                     <a class="btn btn-primary">
                                                         <i class="fas fa-eye"></i>
                                                         Lihat

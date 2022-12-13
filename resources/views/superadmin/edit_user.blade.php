@@ -1,6 +1,6 @@
 @extends('superadmin.superadmin_master')
 @section('superadmin')
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:black;">
+<aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{asset('assets/images/logo-TI_Poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:yellow;">
+            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgray;">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Jumlah User
@@ -55,9 +55,9 @@
     <!-- /.sidebar -->
   </aside>
 
-<div class="content-wrapper" style="background: yellow;">
+<div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
-    <div class="content-header" style="background: yellow;">
+    <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
@@ -69,10 +69,10 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content"  style="background: #ffc107;">
         <div class="container-fluid pt-4 px-4">
             <div class="row">
-                <div class="col-sm-12 col-xl-12">
+                <div class="col-sm-12 col-xl-12" style="margin-bottom:5%;">
                     <div class="bg-light rounded h-100 p-4">
                         <form method="post" action="{{route('users.update', $editData->id)}}">
                             @csrf

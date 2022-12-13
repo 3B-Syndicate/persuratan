@@ -31,8 +31,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         // return view('dashboard');
         // return view('superadmin.index');
-        // return view('admin.index');
-        return view('kaprodi.index');
+        return view('admin.index');
+        // return view('kaprodi.index');
     })->name('dashboard');
 });
 
@@ -47,5 +47,6 @@ Route::prefix('super')->group(function(){
 });
 Route::prefix('admin')->group(function(){
     Route::get('/view',[SuratMasukController::class, 'SMView'])->name('admin.surat_masuk.table');
-
+    Route::get('/add',[SuratMasukController::class, 'SMAdd'])->name('admin.surat_masuk.create');
+    Route::get('/edit',[SuratMasukController::class, 'SMEdit'])->name('admin.surat_masuk.edit');
 });
