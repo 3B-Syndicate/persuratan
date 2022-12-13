@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\SuratKeluarController;
-
-
+use App\Http\Controllers\Backend\SuratMasukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +51,10 @@ Route::prefix('SKeluar')->group(function(){
     Route::get('/edit/{id}',[SuratKeluarController::class, 'edit'])->name('skeluar.edit');
     Route::post('/update/{id}',[SuratKeluarController::class, 'update'])->name('skeluar.update');
     Route::get('/delete/{id}',[SuratKeluarController::class, 'destroy'])->name('skeluar.delete');
-    });
+
+});
+
+Route::prefix('admin')->group(function(){
+    Route::get('/view',[SuratMasukController::class, 'SMView'])->name('admin.surat_masuk.table');
+
+});
