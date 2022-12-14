@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\SuratKeluarController;
 use App\Http\Controllers\Backend\SuratMasukController;
 use App\Http\Controllers\Backend\NotulesiRapatController;
 use App\Http\Controllers\Backend\KajurController;
+use App\Http\Controllers\Backend\KaprodiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +34,9 @@ Route::middleware([
         // return view('superadmin.index');
         // return view('admin.index');
         // return view('kaprodi.index');
-        return view('kajur.index');
+        // return view('kajur.index');
         // return view('admin.index');
-        // return view('kaprodi.index');
+        return view('kaprodi.index');
     })->name('dashboard');
 });
 
@@ -77,4 +78,10 @@ Route::prefix('kajur')->group(function(){
     Route::get('/view/suratmasuk',[KajurController::class, 'indexSM'])->name('kajurSM.view');
     Route::get('/view/suratkeluar',[KajurController::class, 'indexSK'])->name('kajurSK.view');
     Route::get('/view/notulensirapat',[KajurController::class, 'indexNR'])->name('kajurNR.view');
+});
+
+Route::prefix('kaprodi')->group(function(){
+    Route::get('/view/suratmasuk',[KaprodiController::class, 'indexSM'])->name('kaprodiSM.view');
+    Route::get('/view/suratkeluar',[KaprodiController::class, 'indexSK'])->name('kaprodiSK.view');
+    Route::get('/view/notulensirapat',[KaprodiController::class, 'indexNR'])->name('kaprodiNR.view');
 });

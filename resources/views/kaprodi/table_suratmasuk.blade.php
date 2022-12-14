@@ -35,21 +35,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kaprodiSM.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
+            <a href="{{route(kaprodiSK.view')}}" class="nav-link">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
+            <a href="{{route('kaprodiNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>

@@ -35,21 +35,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link" >
+            <a href="{{route('kaprodiSM.view')}}" class="nav-link" >
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kaprodiSK.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
+            <a href="{{route('kaprodiNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>
@@ -103,9 +103,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($allSuratKeluar as $key => $skeluar)
                                     <tr>
-
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$skeluar->Nomor_Surat}}</td>
+                                        <td>{{$skeluar->Tanggal_Surat}}</td>
+                                        <td>{{$skeluar->Perihal}}</td>
+                                        <td>{{$skeluar->Prodi}}</td>
+                                        <td>{{$skeluar->Kepada}}</td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

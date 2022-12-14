@@ -35,21 +35,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link" >
+            <a href="{{route('kaprodiSM.view')}}" class="nav-link" >
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link" >
+            <a href="{{route('kaprodiSK.view')}}" class="nav-link" >
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kaprodiNR.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Notulensi Rapat
               </p>
@@ -102,9 +102,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($AllNotulesiRapat as $key => $nrapat)
                                     <tr>
-
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$nrapat->Nomor_Surat}}</td>
+                                        <td>{{$nrapat->Tanggal_Rapat}}</td>
+                                        <td>{{$nrapat->Ruang_Rapat}}</td>
+                                        <td>{{$nrapat->Perihal}}</td>
+                                        <td>{{$nrapat->Tipe_Rapat}}</td>
+                                        <td>{{$nrapat->Validasi}}</td>
+                                        <td>{{$nrapat->Notulensi}}</td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
