@@ -43,14 +43,14 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark">
+                  <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
+                  <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
               </li>
@@ -67,13 +67,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('skeluar.view')}}" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-envelope-open nav-icon"></i>
                   <p>Daftar Surat Keluar</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('skeluar.add')}}" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Keluar</p>
                 </a>
               </li>
