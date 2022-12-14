@@ -1,5 +1,6 @@
 @extends('kajur.kajur_master')
 @section('kajur')
+
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -35,21 +36,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" >
+            <a href="{{route('kajurSM.view')}}" class="nav-link">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kajurSK.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('kajurNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>
@@ -65,7 +66,8 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+  </aside>
+
 
 <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
@@ -99,13 +101,19 @@
                                         <th>Prodi</th>
                                         <th>Kepada</th>
                                         <th>Disposisi</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($allSuratKeluar as $key => $skeluar)
                                     <tr>
-
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$skeluar->Nomor_Surat}}</td>
+                                        <td>{{$skeluar->Tanggal_Surat}}</td>
+                                        <td>{{$skeluar->Perihal}}</td>
+                                        <td>{{$skeluar->Prodi}}</td>
+                                        <td>{{$skeluar->Kepada}}</td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

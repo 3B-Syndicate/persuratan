@@ -1,5 +1,6 @@
 @extends('kajur.kajur_master')
 @section('kajur')
+
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -28,28 +29,28 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link">
+            <a href="{{route('dashboard')}}" class="nav-link ">
               <p>
                 Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kajurSM.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('kajurSK.view')}}" class="nav-link">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('kajurNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>
@@ -65,7 +66,8 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+  </aside>
+
 
 <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->

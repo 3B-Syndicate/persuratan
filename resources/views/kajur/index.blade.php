@@ -18,7 +18,7 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-4 col-6">
+          <div class="col-lg-4 col-5">
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
@@ -26,10 +26,10 @@
 
                 <p>Surat Masuk</p>
               </div>
-              <a href="{{view('kajur.table_suratkeluar')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('kajurSM.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="cl-lg-4 col-6">
+          <div class="cl-lg-4 col-4">
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
@@ -37,10 +37,10 @@
 
                 <p>Surat Keluar</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('kajurSK.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-4 col-6">
+          <div class="col-lg-4 col-5">
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
@@ -48,7 +48,7 @@
 
                 <p>Notulensi Rapat</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href= "{{route('kajurNR.view')}}"class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         <!-- /.row -->

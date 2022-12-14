@@ -36,21 +36,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" >
+            <a href="{{route('kajurSM.view')}}" class="nav-link">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kajurSK.view')}}" class="nav-link">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('kajurNR.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Notulensi Rapat
               </p>
@@ -66,8 +66,65 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+  </aside>
 
+
+<div class="content-wrapper" style="background: grey;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header" style="background: #ffc107;">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Daftar Notulensi Rapat</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content" style="background: #ffc107;">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px;">No</th>
+                                        <th>Nomor Surat</th>
+                                        <th>Tanggal Rapat</th>
+                                        <th>Ruang Rapat</th>
+                                        <th>Perihal</th>
+                                        <th>Tipe Rapat</th>
+                                        <th>Validasi</th>
+                                        <th>Notulensi</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($AllNotulesiRapat as $key => $nrapat)
+                                    <tr>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$nrapat->Nomor_Surat}}</td>
+                                        <td>{{$nrapat->Tanggal_Rapat}}</td>
+                                        <td>{{$nrapat->Ruang_Rapat}}</td>
+                                        <td>{{$nrapat->Perihal}}</td>
+                                        <td>{{$nrapat->Tipe_Rapat}}</td>
+                                        <td>{{$nrapat->Validasi}}</td>
+                                        <td>{{$nrapat->Notulensi}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- /.content -->
 
 
 @endsection
