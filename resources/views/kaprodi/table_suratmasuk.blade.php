@@ -1,5 +1,5 @@
-@extends('superadmin.superadmin_master')
-@section('superadmin')
+@extends('kaprodi.kaprodi_master')
+@section('kaprodi')
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -29,17 +29,29 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{route('dashboard')}}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgray;">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="{{route('user.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
-                Jumlah User
+                Surat Masuk
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('user.view')}}" class="nav-link">
+              <p>
+                Surat Keluar
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('user.view')}}" class="nav-link">
+              <p>
+                Notulensi Rapat
               </p>
             </a>
           </li>
@@ -53,18 +65,16 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+</aside>
+
 <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Jumlah User</h1>
+                    <h1 class="m-0 text-dark">Surat Masuk</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <a href="{{route('user.add')}}" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah User</a>
-                </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
@@ -83,27 +93,19 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 10px;">No</th>
-                                        <th>Nama User</th>
-                                        <th>Roles</th>
-                                        <th>Email</th>
+                                        <th>Nomor Surat</th>
+                                        <th>Tanggal Surat</th>
+                                        <th>Tanggal Surat Diterima</th>
+                                        <th>Pengirim Surat</th>
+                                        <th>Perihal</th>
+                                        <th>Disposisi</th>
                                         <th>Aksi</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($allDataUser as $key => $user)
                                     <tr>
-                                        <td>{{$key+1}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->usertype}}</td>
-                                        <td>{{$user->email}}</td>
-                                        <td>
-                                            <a href="{{route('users.edit', $user->id)}}" class="btn btn-info">Edit</a>
-                                            <a href="{{route('users.delete', $user->id)}}" id="delete"
-                                                class="btn btn-danger">Delete</a>
-                                        </td>
+
                                     </tr>
-                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

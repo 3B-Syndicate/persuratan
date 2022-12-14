@@ -13,7 +13,7 @@
           <img src="{{Auth::user()->profile_photo_url}}" class="img-circle elevation-2" alt="{{Auth::user()->name }}">
         </div>
         <div class="info">
-          <a href="#" class="d-block">
+          <a href="{{route('dashboard')}}" class="d-block">
           {{ Auth::user()->name }}
           </a>
         </div>
@@ -34,28 +34,73 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Masuk
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Surat Masuk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Surat Masuk</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Keluar
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('skeluar.view')}}" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Surat Keluar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('skeluar.add')}}" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Surat Keluar</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Notulensi Rapat
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Notulensi Rapat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Notulensi Rapat</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item fixed-bottom">
             <a href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">

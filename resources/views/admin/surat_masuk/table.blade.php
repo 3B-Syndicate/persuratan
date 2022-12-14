@@ -16,7 +16,7 @@
           <img src="{{Auth::user()->profile_photo_url}}" class="img-circle elevation-2" alt="{{Auth::user()->name }}">
         </div>
         <div class="info">
-          <a href="{{route('dashboard')}}" class="d-block">
+          <a href="#" class="d-block">
           {{ Auth::user()->name }}
           </a>
         </div>
@@ -29,7 +29,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('dashboard')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
+            <a href="#" class="nav-link active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Masuk
@@ -46,64 +46,34 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
+                <a href="#" class="nav-link text-dark active" style="background:lightgrey;">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-wrench nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
-              <i class="nav-icon fas fa-mail-bulk"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 Surat Keluar
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('skeluar.view')}}" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Surat Keluar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('skeluar.add')}}" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Surat Keluar</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
-              <i class="nav-icon fas fa-mail-bulk"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 Notulensi Rapat
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Notulensi Rapat</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Notulensi Rapat</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item fixed-bottom">
             <a href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
@@ -115,17 +85,19 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+</aside>
 
-
-<div class="content-wrapper" style="background: grey;">
+<div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Surat Keluar</h1>
+                    <h1 class="m-0 text-dark">Surat Masuk</h1>
                 </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <a href="#" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah Surat</a>
+                </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
@@ -146,27 +118,47 @@
                                         <th style="width: 10px;">No</th>
                                         <th>Nomor Surat</th>
                                         <th>Tanggal Surat</th>
-                                        <th>Perihal</th>
-                                        <th>Prodi</th>
-                                        <th>Kepada</th>
+                                        <th>Tanggal Terima</th>
+                                        <th>Pengirim</th>
+                                        <th>Perihal Surat</th>
+                                        <th>Jenis Disposisi</th>
+                                        <th>Lampiran</th>
                                         <th>Aksi</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($allSuratKeluar as $key => $skeluar)
                                     <tr>
-                                        <td>{{$key+1}}</td>
-                                        <td>{{$skeluar->Nomor_Surat}}</td>
-                                        <td>{{$skeluar->Tanggal_Surat}}</td>
-                                        <td>{{$skeluar->Perihal}}</td>
-                                        <td>{{$skeluar->Prodi}}</td>
-                                        <td>{{$skeluar->Kepada}}</td>
-                                        <td><a href="{{route('skeluar.edit', $skeluar->id)}}" class="btn btn-info">Edit</a>
-                                            <a href="{{route('skeluar.delete', $skeluar->id)}}" id="delete" class="btn btn-danger">Delete</a>
+                                        <td>1</td>
+                                        <td>JKH.09UI</td>
+                                        <td>01/01/2000</td>
+                                        <td>10/01/2000</td>
+                                        <td>Politeknik Negeri Banyuwangi</td>
+                                        <td>Sosialisasi Desain Grafis</td>
+                                        <td>Biasa</td>
+                                        <td>1 Halaman</td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                            <div class="btn btn-primary" data-toggle="dropdown">
+                                                <i class="fas fa-cog"></i>
+                                                <div class="dropdown-menu" style="margin-right:3%;">
+                                                    <a class="btn btn-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                        Lihat
+                                                    </a>
+                                                    <a class="btn btn-primary">
+                                                        <i class="fas fa-print"></i>
+                                                        Cetak
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
-                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -174,4 +166,5 @@
                 </div>
     </section>
     <!-- /.content -->
+</div>
 @endsection
