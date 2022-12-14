@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+
 <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
@@ -23,19 +24,7 @@
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>6</h3>
-
                 <p>Surat Masuk</p>
-              </div>
-              <a href="{{route('admin.surat_masuk.table')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box" style="background: lightyellow;">
-              <div class="inner">
-                <h3>12</h3>
-
-                <p>Surat Keluar</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -44,8 +33,17 @@
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
+                <h3>12</h3>
+                <p>Surat Keluar</p>
+              </div>
+              <a href="{{route('skeluar.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box" style="background: lightyellow;">
+              <div class="inner">
                 <h3>3</h3>
-
                 <p>Notulensi Rapat</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
@@ -56,7 +54,6 @@
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>3</h3>
-
                 <p>Surat Tugas Pegawai</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>

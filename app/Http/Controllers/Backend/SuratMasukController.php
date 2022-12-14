@@ -11,7 +11,15 @@ class SuratMasukController extends Controller
     public function SMView(){
         // $data['allDataUser']=User::all();
         return view('admin.surat_masuk.table');
-     }
+    }
+    public function SMAdd(){
+        //$data['allDataUser']=User::all();
+        return view('admin.surat_masuk.create');
+    } 
+    public function SMEdit(){
+        //$data['allDataUser']=User::all();
+        return view('admin.surat_masuk.edit');
+    }
     /**
      * Display a listing of the resource.
      *

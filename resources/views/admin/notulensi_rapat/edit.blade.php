@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -15,7 +16,7 @@
           <img src="{{Auth::user()->profile_photo_url}}" class="img-circle elevation-2" alt="{{Auth::user()->name }}">
         </div>
         <div class="info">
-          <a href="#" class="d-block">
+          <a href="{{route('dashboard')}}" class="d-block">
           {{ Auth::user()->name }}
           </a>
         </div>
@@ -36,7 +37,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark" style="background:lightgrey;">
+            <a href="#" class="nav-link text-dark">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Masuk
@@ -46,13 +47,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark">
-                <i class="fas fa-envelope nav-icon"></i>
+                  <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark active" style="background:lightgrey;">
-                <i class="fas fa-plus nav-icon"></i>
+                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
+                  <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
               </li>
@@ -82,7 +83,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
+            <a href="#" class="nav-link text-dark active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Notulensi Rapat
@@ -114,15 +115,15 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+  </aside>
 
-<div class="content-wrapper" style="background: gray;">
+  <div class="content-wrapper" style="background: grey;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Tambah Surat Masuk</h1> 
+                    <h1 class="content" style="text-colour: black;">Tambah Surat Keluar</h1>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -130,71 +131,61 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content" style="background: #ffc107;">
+    <section class="content">
         <div class="container-fluid pt-4 px-4">
             <div class="row">
-                <div class="col-sm-12 col-xl-12" style="margin-bottom:5%;">
+                <div class="col-sm-12 col-xl-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <form method="post" action="">
+                        <form method="post" action="{{route('nrapat.update', $editData->id)}}">
                             @csrf
                             <div class="row">
                                 <div class="col">
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Nomor Surat</label>
-                                      <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                      </div>
+                                <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="ruang_rapat" class="col-sm-2 col-form-label">Ruang Rapat</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="ruang_rapat" class="form-control"
+                                                    id="ruang_rapat">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Tanggal Surat</label>
-                                      <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                      </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="tipe_rapat" class="col-sm-2 col-form-label">Tipe Rapat</label>
+                                            <div class="col-sm-10">
+                                                <select name="tipe_rapat" id="tipe_rapat" class="form-control">
+                                                    <option selected="">Pilih Tipe Rapat</option>
+                                                    <option value="Rahasia">Rahasia</option>
+                                                    <option value="penting">Penting</option>
+                                                    <option value="biasa">Biasa</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Tanggal Diterima</label>
-                                      <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                      </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="validasi" class="col-sm-2 col-form-label">Validasi</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="validasi" class="form-control" id="validasi">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Pengirim</label>
-                                      <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                      </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="notulensi" class="col-sm-2 col-form-label">Notulensi</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="notulensi" class="form-control" id="notulensi">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Perihal Surat</label>
-                                      <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                      </div>
-                                    </div>
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Disposisi</label>
-                                      <div class="col-sm-10">
-                                        <select name="selectUser" id="selectUser" class="form-control" aria-label="Default select example">
-                                          <option selected="">Pilih disposisi </option>
-                                          <option value="">A</option>
-                                          <option value="">B</option>
-                                          <option value="">C</option>
-                                          <option value="">D</option>
-                                          <option value="">E</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran</label>
-                                      <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                                      </div>
-                                    </div>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary position-relative">Submit</button>
-                        </form>
+                        </Form>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <!-- /.content -->
 </div>

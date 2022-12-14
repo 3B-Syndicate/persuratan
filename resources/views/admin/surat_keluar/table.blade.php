@@ -1,3 +1,6 @@
+@extends('admin.admin_master')
+@section('admin')
+
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -26,7 +29,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('dashboard')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -57,7 +60,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
+            <a href="#" class="nav-link text-dark active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Keluar
@@ -66,7 +69,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('skeluar.view')}}" class="nav-link text-dark">
+                <a href="{{route('skeluar.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
                   <i class="fas fa-envelope-open nav-icon"></i>
                   <p>Daftar Surat Keluar</p>
                 </a>
@@ -112,4 +115,68 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+</aside>
+
+
+<div class="content-wrapper" style="background: grey;">
+    <!-- Content Header (Page header) -->
+    <div class="content-header" style="background: #ffc107;">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Daftar Surat Keluar</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content" style="background: #ffc107;">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px;">No</th>
+                                        <th>Nomor Surat</th>
+                                        <th>Tanggal Surat</th>
+                                        <th>Perihal</th>
+                                        <th>Prodi</th>
+                                        <th>Kepada</th>
+                                        <th>Aksi</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($allSuratKeluar as $key => $skeluar)
+                                    <tr>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$skeluar->Nomor_Surat}}</td>
+                                        <td>{{$skeluar->Tanggal_Surat}}</td>
+                                        <td>{{$skeluar->Perihal}}</td>
+                                        <td>{{$skeluar->Prodi}}</td>
+                                        <td>{{$skeluar->Kepada}}</td>
+                                        <td>
+                                          <a href="{{route('skeluar.edit', $skeluar->id)}}" class="btn btn-success" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                          </a>
+                                          <a href="{{route('skeluar.delete', $skeluar->id)}}" id="delete" class="btn btn-danger" title="Hapus">
+                                            <i class="fas fa-trash"></i>
+                                          </a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- /.content -->
+@endsection
