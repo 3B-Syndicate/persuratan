@@ -32,7 +32,8 @@ Route::middleware([
         // return view('dashboard');
         // return view('superadmin.index');
         // return view('admin.index');
-        return view('kaprodi.index');
+        // return view('kaprodi.index');
+        return view('kajur.index');
     })->name('dashboard');
 });
 
