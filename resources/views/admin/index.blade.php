@@ -24,7 +24,6 @@
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>6</h3>
-
                 <p>Surat Masuk</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
@@ -35,7 +34,6 @@
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>12</h3>
-
                 <p>Surat Keluar</p>
               </div>
               <a href="{{route('skeluar.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
@@ -46,7 +44,6 @@
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>3</h3>
-
                 <p>Notulensi Rapat</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
@@ -57,7 +54,6 @@
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
                 <h3>3</h3>
-
                 <p>Surat Tugas Pegawai</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
