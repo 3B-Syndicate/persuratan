@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('dashboard') }}" class="nav-link active text-dark" style="background:yellow;">
+            <a href="{{ route('dashboard') }}" class="nav-link active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -38,7 +38,6 @@
               <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Disposisi Masuk
-                <span class="right badge badge-danger">20</span>
               </p>
             </a>
           </li>

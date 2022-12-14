@@ -45,11 +45,11 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
-        
+
         </div>
         <!-- /.row (main row) -->
-        <div class="row justify-content-md-center" style="background: lightyellow;">
-          <div class="col-md-auto mt-3">
+        <div class="row justify-content-md-center" style="background: #ffc107;">
+          <div class="col-md-auto mb-3">
             <a class="btn btn-primary" href="#" role="button">Unggah Surat</a>
           </div>
         </div>

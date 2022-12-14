@@ -111,6 +111,13 @@
                                         <td>{{$skeluar->Perihal}}</td>
                                         <td>{{$skeluar->Prodi}}</td>
                                         <td>{{$skeluar->Kepada}}</td>
+                                        <td>{{$skeluar->Disposisi}}</td>
+                                        <td>
+                                        <div class="btn btn-primary">
+                                            <i class="fas fa-eye"></i>
+                                                        Lihat
+                                            </div>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

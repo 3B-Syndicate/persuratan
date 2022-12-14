@@ -69,13 +69,13 @@
   </aside>
 
 
-<div class="content-wrapper" style="background: gray;">
+  <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Table Surat Keluar</h1>
+                    <h1 class="m-0 text-dark">Surat Keluar</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -101,6 +101,7 @@
                                         <th>Prodi</th>
                                         <th>Kepada</th>
                                         <th>Disposisi</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -112,6 +113,13 @@
                                         <td>{{$skeluar->Perihal}}</td>
                                         <td>{{$skeluar->Prodi}}</td>
                                         <td>{{$skeluar->Kepada}}</td>
+                                        <td>{{$skeluar->Disposisi}}</td>
+                                        <td>
+                                        <div class="btn btn-primary">
+                                            <i class="fas fa-eye"></i>
+                                                        Lihat
+                                            </div>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

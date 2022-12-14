@@ -98,6 +98,8 @@
                                         <th>Perihal</th>
                                         <th>Waktu</th>
                                         <th>Tipe Rapat</th>
+                                        <th>Validasi</th>
+                                        <th>Notulensi</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -112,6 +114,12 @@
                                         <td>{{$nrapat->Tipe_Rapat}}</td>
                                         <td>{{$nrapat->Validasi}}</td>
                                         <td>{{$nrapat->Notulensi}}</td>
+                                        <td>
+                                          <div class="btn btn-primary">
+                                            <i class="fas fa-eye"></i>
+                                                        Lihat
+                                            </div>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

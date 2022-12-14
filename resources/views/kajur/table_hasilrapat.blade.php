@@ -69,13 +69,13 @@
   </aside>
 
 
-<div class="content-wrapper" style="background: grey;">
+  <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Daftar Notulensi Rapat</h1>
+                    <h1 class="m-0 text-dark">Notulensi Rapat</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -96,17 +96,17 @@
                                     <tr>
                                         <th style="width: 10px;">No</th>
                                         <th>Nomor Surat</th>
-                                        <th>Tanggal Rapat</th>
-                                        <th>Ruang Rapat</th>
+                                        <th>Tanggal Surat</th>
                                         <th>Perihal</th>
+                                        <th>Waktu</th>
                                         <th>Tipe Rapat</th>
                                         <th>Validasi</th>
                                         <th>Notulensi</th>
-
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($AllNotulesiRapat as $key => $nrapat)
+                                @foreach($AllNotulesiRapat as $key => $nrapat)
                                     <tr>
                                         <td>{{$key+1}}</td>
                                         <td>{{$nrapat->Nomor_Surat}}</td>
@@ -116,6 +116,12 @@
                                         <td>{{$nrapat->Tipe_Rapat}}</td>
                                         <td>{{$nrapat->Validasi}}</td>
                                         <td>{{$nrapat->Notulensi}}</td>
+                                        <td>
+                                          <div class="btn btn-primary">
+                                            <i class="fas fa-eye"></i>
+                                                        Lihat
+                                            </div>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -125,6 +131,5 @@
                 </div>
     </section>
     <!-- /.content -->
-
-
+</div>
 @endsection

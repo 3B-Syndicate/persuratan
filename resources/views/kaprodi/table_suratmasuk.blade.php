@@ -42,7 +42,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route(kaprodiSK.view')}}" class="nav-link">
+            <a href="{{route('kaprodiSK.view')}}" class="nav-link">
               <p>
                 Surat Keluar
               </p>
@@ -99,13 +99,29 @@
                                         <th>Pengirim Surat</th>
                                         <th>Perihal</th>
                                         <th>Disposisi</th>
+                                        <th>Lampiran</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  @foreach($allSuratMasuk as $key=>$smasuk)
                                     <tr>
-
+                                    <td>{{$key+1}}</td>
+                                        <td>{{$smasuk->Nomor_Surat}}</td>
+                                        <td>{{$smasuk->Tanggal_Surat}}</td>
+                                        <td>{{$smasuk->Tanggal_Diterima}}</td>
+                                        <td>{{$smasuk->Pengirim}}</td>
+                                        <td>{{$smasuk->Perihal}}</td>
+                                        <td>{{$smasuk->Disposisi}}</td>
+                                        <td>{{$smasuk->Lampiran}}</td>
+                                        <td>
+                                        <div class="btn btn-primary">
+                                            <i class="fas fa-eye"></i>
+                                                        Lihat
+                                            </div>
+                                        </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
