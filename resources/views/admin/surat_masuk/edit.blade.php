@@ -45,13 +45,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark">
+                <a href="{{route('smasuk.view')}}" class="nav-link text-dark">
                 <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
+                <a href="{{route('smasuk.add')}}" class="nav-link text-dark">
                 <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
@@ -135,14 +135,14 @@
             <div class="row">
                 <div class="col-sm-12 col-xl-12" style="margin-bottom:5%;">
                     <div class="bg-light rounded h-100 p-4">
-                        <form method="post" action="">
+                        <form method="post" action="{{route('smasuk.update', $editData->id)}}">
                             @csrf
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Isi Disposisi</label>
+                                      <label for="isiDisposisi" class="col-sm-2 col-form-label">Isi Disposisi</label>
                                       <div class="col-sm-10">
-                                        <textarea type="text" name="" class="form-control" id=""></textarea>
+                                        <textarea type="text" name="isi_disposisi" class="form-control" id="isi_disposisi"></textarea>
                                       </div>
                                     </div>
                                 </div>

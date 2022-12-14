@@ -45,13 +45,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark active" style="background:lightgrey;">
+                <a href="{{route('smasuk.view')}}" class="nav-link text-dark active" style="background:lightgrey;">
                   <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
+                <a href="{{route('smasuk.add')}}" class="nav-link text-dark">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
@@ -124,9 +124,6 @@
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">Surat Masuk</h1>
                 </div><!-- /.col -->
-                <!-- <div class="col-sm-6">
-                    <a href="{{route('admin.surat_masuk.create')}}" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah Surat</a>
-                </div> -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
@@ -151,24 +148,24 @@
                                         <th>Jenis Disposisi</th>
                                         <th>Lampiran</th>
                                         <th>Aksi</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  @foreach($allSuratMasuk as $key => $smasuk)
                                     <tr>
-                                        <td>1</td>
-                                        <td>JKH.09UI</td>
-                                        <td>01/01/2000</td>
-                                        <td>10/01/2000</td>
-                                        <td>Politeknik Negeri Banyuwangi</td>
-                                        <td>Sosialisasi Desain Grafis</td>
-                                        <td>Biasa</td>
-                                        <td>1 Halaman</td>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$smasuk->Nomor_Surat}}</td>
+                                        <td>{{$smasuk->Tanggal_Surat}}</td>
+                                        <td>{{$smasuk->Tanggal_Diterima}}</td>
+                                        <td>{{$smasuk->Pengirim}}</td>
+                                        <td>{{$smasuk->Perihal}}</td>
+                                        <td>{{$smasuk->Disposisi}}</td>
+                                        <td>{{$smasuk->Lampiran}}</td>
                                         <td>
-                                            <a href="{{route('admin.surat_masuk.edit')}}" class="btn btn-success" title="Edit">
+                                            <a href="{{route('smasuk.edit', $smasuk->id)}}" class="btn btn-success" title="Edit">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="#" class="btn btn-danger" title="Hapus">
+                                            <a href="{{route('smasuk.delete', $smasuk->id)}}" class="btn btn-danger" title="Hapus">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                             <div class="btn btn-primary" data-toggle="dropdown" title="Opsi">
@@ -186,6 +183,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                  @endforeach
                                 </tbody>
                             </table>
                         </div>
