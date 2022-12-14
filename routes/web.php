@@ -42,7 +42,7 @@ Route::prefix('super')->group(function(){
     Route::get('/edit/{id}',[UserController::class, 'UserEdit'])->name('users.edit');
     Route::post('/update/{id}',[UserController::class, 'UsersUpdate'])->name('users.update');
     Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
-    });
+});
 
 Route::prefix('SKeluar')->group(function(){
     Route::get('/view',[SuratKeluarController::class, 'index'])->name('skeluar.view');
@@ -51,7 +51,6 @@ Route::prefix('SKeluar')->group(function(){
     Route::get('/edit/{id}',[SuratKeluarController::class, 'edit'])->name('skeluar.edit');
     Route::post('/update/{id}',[SuratKeluarController::class, 'update'])->name('skeluar.update');
     Route::get('/delete/{id}',[SuratKeluarController::class, 'destroy'])->name('skeluar.delete');
-
 });
 
 Route::prefix('admin')->group(function(){

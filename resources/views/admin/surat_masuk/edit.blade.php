@@ -59,20 +59,50 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('admin.surat_masuk.edit')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Keluar
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('skeluar.view')}}" class="nav-link text-dark">
+                  <i class="fas fa-envelope-open nav-icon"></i>
+                  <p>Daftar Surat Keluar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('skeluar.add')}}" class="nav-link text-dark">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Tambah Surat Keluar</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Notulensi Rapat
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Notulensi Rapat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Notulensi Rapat</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item fixed-bottom">
             <a href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">

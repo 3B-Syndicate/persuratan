@@ -46,33 +46,63 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark active" style="background:lightgrey;">
-                <i class="fas fa-envelope nav-icon"></i>
+                  <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
-                <i class="fas fa-plus nav-icon"></i>
+                  <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Keluar
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('skeluar.view')}}" class="nav-link text-dark">
+                  <i class="fas fa-envelope-open nav-icon"></i>
+                  <p>Daftar Surat Keluar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('skeluar.add')}}" class="nav-link text-dark">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Tambah Surat Keluar</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="#" class="nav-link text-dark">
+              <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Notulensi Rapat
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Notulensi Rapat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-dark">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Notulensi Rapat</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item fixed-bottom">
             <a href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
@@ -94,9 +124,9 @@
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">Surat Masuk</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
+                <!-- <div class="col-sm-6">
                     <a href="{{route('admin.surat_masuk.create')}}" style="float:right; position: relative;" class="btn btn-mini btn-success text-light">Tambah Surat</a>
-                </div>
+                </div> -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
@@ -104,7 +134,7 @@
 
     <!-- Main content -->
     <section class="content" style="background: #ffc107;">
-        <div class="container-fluid pt-4 px-4">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
@@ -135,13 +165,13 @@
                                         <td>Biasa</td>
                                         <td>1 Halaman</td>
                                         <td>
-                                            <a href="{{route('admin.surat_masuk.edit')}}" class="btn btn-success">
+                                            <a href="{{route('admin.surat_masuk.edit')}}" class="btn btn-success" title="Edit">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="#" class="btn btn-danger">
+                                            <a href="#" class="btn btn-danger" title="Hapus">
                                                 <i class="fas fa-trash"></i>
                                             </a>
-                                            <div class="btn btn-primary" data-toggle="dropdown">
+                                            <div class="btn btn-primary" data-toggle="dropdown" title="Opsi">
                                                 <i class="fas fa-cog"></i>
                                                 <div class="dropdown-menu" style="margin-right:3%;padding:3px;">
                                                     <a class="btn btn-primary">
