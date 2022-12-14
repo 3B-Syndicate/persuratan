@@ -92,13 +92,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
+                <a href="{{route('nrapat.view')}}" class="nav-link text-dark">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Notulensi Rapat</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
+                <a href="{{route('nrapat.add')}}" class="nav-link text-dark">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Notulensi Rapat</p>
                 </a>

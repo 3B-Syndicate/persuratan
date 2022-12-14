@@ -49,13 +49,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">
+                            <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark">
                                 <i class="fas fa-envelope nav-icon"></i>
                                 <p>Daftar Surat Masuk</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">
+                            <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Surat Masuk</p>
                             </a>
@@ -63,7 +63,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active text-dark" style="background:lightgrey;">
+                    <a href="#" class="nav-link text-dark">
                         <i class="nav-icon fas fa-mail-bulk"></i>
                         <p>
                             Surat Keluar
@@ -78,7 +78,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('skeluar.add')}}" class="nav-link active text-dark" style="background:lightgrey;">
+                            <a href="{{route('skeluar.add')}}" class="nav-link text-dark">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Surat Keluar</p>
                             </a>
@@ -86,7 +86,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-dark">
+                    <a href="#" class="nav-link text-dark active text-dark" style="background:lightgrey;">
                         <i class="nav-icon fas fa-mail-bulk"></i>
                         <p>
                             Notulensi Rapat
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('nrapat.add')}}" class="nav-link text-dark">
+                            <a href="{{route('nrapat.add')}}" class="nav-link text-dark active text-dark" style="background:lightgrey;">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah Notulensi Rapat</p>
                             </a>
@@ -126,7 +126,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="content" style="text-colour: black;">Tambah Surat Keluar</h1>
+                    <h1 class="content" style="text-colour: black;">Tambah Notulensi Rapat</h1>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -139,17 +139,25 @@
             <div class="row">
                 <div class="col-sm-12 col-xl-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <form method="post" action="{{route('skeluar.store')}}">
+                        <form method="post" action="{{route('nrapat.store')}}">
                             @csrf
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-1">
                                         <div class="form-group row">
-                                            <label for="tanggalSurat" class="col-sm-2 col-form-label">Tanggal
-                                                Surat</label>
+                                            <label for="tanggal_rapat" class="col-sm-2 col-form-label">Tanggal Rapat</label>
                                             <div class="col-sm-10">
-                                                <input type="date" name="tanggal_surat" class="form-control"
-                                                    id="tanggal_surat">
+                                                <input type="date" name="tanggal_rapat" class="form-control"
+                                                    id="tanggal_rapat">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="ruang_rapat" class="col-sm-2 col-form-label">Ruang Rapat</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="ruang_rapat" class="form-control"
+                                                    id="ruang_rapat">
                                             </div>
                                         </div>
                                     </div>
@@ -163,31 +171,31 @@
                                     </div>
                                     <div class="mb-1">
                                         <div class="form-group row">
-                                            <label for="prodi" class="col-sm-2 col-form-label">Prodi</label>
+                                            <label for="tipe_rapat" class="col-sm-2 col-form-label">Tipe Rapat</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="prodi" class="form-control" id="prodi">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-1">
-                                        <div class="form-group row">
-                                            <label for="kepada" class="col-sm-2 col-form-label">Kepada</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" name="kepada" class="form-control" id="kepada">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-1">
-                                        <div class="form-group row">
-                                            <label for="disposisi" class="col-sm-2 col-form-label">Disposisi</label>
-                                            <div class="col-sm-10">
-                                                <select name="disposisi" id="disposisi" class="form-control">
-                                                    <option selected="">Pilih Jenis disposisi</option>
+                                                <select name="tipe_rapat" id="tipe_rapat" class="form-control">
+                                                    <option selected="">Pilih Tipe Rapat</option>
                                                     <option value="Rahasia">Rahasia</option>
                                                     <option value="penting">Penting</option>
                                                     <option value="biasa">Biasa</option>
-                                                </select> 
-                                              </div>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="validasi" class="col-sm-2 col-form-label">Validasi</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="validasi" class="form-control" id="validasi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="notulensi" class="col-sm-2 col-form-label">Notulensi</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="notulensi" class="form-control" id="notulensi">
+                                            </div>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Simpan</button>

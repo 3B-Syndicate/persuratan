@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\SuratKeluarController;
 use App\Http\Controllers\Backend\SuratMasukController;
+use App\Http\Controllers\Backend\NotulesiRapatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,8 +54,17 @@ Route::prefix('SKeluar')->group(function(){
     Route::get('/delete/{id}',[SuratKeluarController::class, 'destroy'])->name('skeluar.delete');
 });
 
-Route::prefix('admin')->group(function(){
+Route::prefix('SMasuk')->group(function(){
     Route::get('/view',[SuratMasukController::class, 'SMView'])->name('admin.surat_masuk.table');
     Route::get('/add',[SuratMasukController::class, 'SMAdd'])->name('admin.surat_masuk.create');
     Route::get('/edit',[SuratMasukController::class, 'SMEdit'])->name('admin.surat_masuk.edit');
+});
+
+Route::prefix('NRapat')->group(function(){
+    Route::get('/view',[NotulesiRapatController::class, 'index'])->name('nrapat.view');
+    Route::get('/add',[NotulesiRapatController::class, 'create'])->name('nrapat.add');
+    Route::post('/store',[NotulesiRapatController::class, 'store'])->name('nrapat.store');
+    Route::get('/edit/{id}',[NotulesiRapatController::class, 'edit'])->name('nrapat.edit');
+    Route::post('/update/{id}',[NotulesiRapatController::class, 'update'])->name('nrapat.update');
+    Route::get('/delete/{id}',[NotulesiRapatController::class, 'destroy'])->name('nrapat.delete');
 });
