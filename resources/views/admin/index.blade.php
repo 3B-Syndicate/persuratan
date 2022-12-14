@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+
 <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
@@ -26,7 +27,7 @@
 
                 <p>Surat Masuk</p>
               </div>
-              <a href="{{route('admin.surat_masuk.table')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
@@ -37,7 +38,7 @@
 
                 <p>Surat Keluar</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('skeluar.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">

@@ -33,8 +33,6 @@ class UserController extends Controller
         
         $data->save();
 
-       
-
         return redirect()->route('user.view')->with('info','Data added Successfully');
 
 }
@@ -55,10 +53,9 @@ class UserController extends Controller
         $data->usertype=$request->selectUser;
         $data->name=$request->textNama;
         $data->email=$request->email;
-        // $data->hp=$request->textHP;
-        // if($request->password!=""){
-        //     $data->password=bcrypt($request->password);
-        // }
+        if($request->password!=""){
+            $data->password=bcrypt($request->password);
+        }
         $data->save();
 
         return redirect()->route('user.view')->with('info','Update user berhasil');
