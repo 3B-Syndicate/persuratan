@@ -8,91 +8,54 @@ use Illuminate\Http\Request;
 
 class SuratMasukController extends Controller
 {
-    public function SMView(){
-        // $data['allDataUser']=User::all();
-        return view('admin.surat_masuk.table');
-    }
-    public function SMAdd(){
-        //$data['allDataUser']=User::all();
-        return view('admin.surat_masuk.create');
-    } 
-    public function SMEdit(){
-        //$data['allDataUser']=User::all();
-        return view('admin.surat_masuk.edit');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $data['allSuratMasuk']=SuratMasuk::all();
+        return view('admin.surat_masuk.table', $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('admin.surat_masuk.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $data= new SuratMasuk();
+        $data->Nomor_Surat=$request->nomor_surat;
+        $data->Tanggal_Surat=$request->tgl_surat;
+        $data->Tanggal_Diterima=$request->tgl_diterima;
+        $data->Pengirim=$request->pengirim;
+        $data->Perihal=$request->perihal;
+        $data->Disposisi=$request->disposisi;
+        $data->Lampiran=$request->lampiran;
+        
+        $data->save();
+        return redirect()->route('smasuk.view')->with('info','Data added Successfully');     
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\SuratMasuk  $suratMasuk
-     * @return \Illuminate\Http\Response
-     */
-    public function show(SuratMasuk $suratMasuk)
+    public function edit($id)
     {
-        //
+        $editData = SuratMasuk::find($id);
+        return view('admin.surat_masuk.edit', compact('editData'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SuratMasuk  $suratMasuk
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SuratMasuk $suratMasuk)
+    public function update(Request $request, $id)
+    // BELUM
     {
-        //
+        $data=SuratMasuk::find($id);
+        
+        $data->isi_Disposisi=$request->isi_disposisi;
+
+        $data->save();
+        return redirect()->route('smasuk.view')->with('info','Update Surat berhasil');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SuratMasuk  $suratMasuk
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, SuratMasuk $suratMasuk)
+    public function destroy($id)
     {
-        //
-    }
+        $deleteData = SuratMasuk::find($id);
+        $deleteData->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\SuratMasuk  $suratMasuk
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(SuratMasuk $suratMasuk)
-    {
-        //
+        return redirect()->route('smasuk.view')->with('info','Delete Surat berhasil');
     }
 }

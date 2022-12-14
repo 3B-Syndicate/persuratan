@@ -60,9 +60,12 @@ Route::prefix('SKeluar')->group(function(){
 });
 
 Route::prefix('SMasuk')->group(function(){
-    Route::get('/view',[SuratMasukController::class, 'SMView'])->name('admin.surat_masuk.table');
-    Route::get('/add',[SuratMasukController::class, 'SMAdd'])->name('admin.surat_masuk.create');
-    Route::get('/edit',[SuratMasukController::class, 'SMEdit'])->name('admin.surat_masuk.edit');
+    Route::get('/view',[SuratMasukController::class, 'index'])->name('smasuk.view');
+    Route::get('/add',[SuratMasukController::class, 'create'])->name('smasuk.add');
+    Route::post('/store',[SuratMasukController::class, 'store'])->name('smasuk.store');
+    Route::get('/edit/{id}',[SuratMasukController::class, 'edit'])->name('smasuk.edit');
+    Route::post('/update/{id}',[SuratMasukController::class, 'update'])->name('smasuk.update');
+    Route::get('/delete/{id}',[SuratMasukController::class, 'destroy'])->name('smasuk.delete');
 });
 
 Route::prefix('NRapat')->group(function(){
