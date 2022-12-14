@@ -27,16 +27,15 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        $user = DB::table('users')->get();
+        // $user = DB::table('users')->get();
         // return view('dashboard');
         // return view('superadmin.index',['user' => $users]);
-        // return view('admin.index');
+        return view('admin.index');
 
         // if($users->usertype=="Super Admin"){
         //     return view('superadmin.index',['user' => $users]);
         // }
-        // return view('admin.index');
-        return view('superadmin.index',['user' => $user]);
+        // return view('superadmin.index',['user' => $user]);
         // return view('kaprodi.index');
     })->name('dashboard');
 });
