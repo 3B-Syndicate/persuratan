@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:black;">
+<aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{asset('assets/images/logo-poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -22,7 +22,7 @@
       <!-- SidebarSearch Form -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column text-center" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('disposisi_masuk.index') }}" class="nav-link" id="disposisi_masuk">
+            <a href="#" class="nav-link" id="disposisi_masuk">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Disposisi Masuk
@@ -43,7 +43,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('notulensi_rapat.index') }}" class="nav-link" id="notulensi_rapat">
+            <a href="#" class="nav-link" id="notulensi_rapat">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
                 Notulensi Rapat
@@ -52,7 +52,7 @@
           </li>
 
           <li class="nav-item fixed-bottom  text-center">
-            <a  href="{{route('dosen.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
+            <a  href="#" class="nav-link bg-secondary" style="margin-left: 6px;">
               <p>Logout</p>
             </a>
           </li>
