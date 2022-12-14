@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\SuratKeluarController;
 use App\Http\Controllers\Backend\SuratMasukController;
 use App\Http\Controllers\Backend\NotulesiRapatController;
+use App\Http\Controllers\Backend\KajurController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         // return view('dashboard');
         // return view('superadmin.index');
-        return view('admin.index');
+        // return view('admin.index');
+        // return view('kaprodi.index');
+        return view('kajur.index');
+        // return view('admin.index');
         // return view('kaprodi.index');
     })->name('dashboard');
 });
@@ -70,4 +74,10 @@ Route::prefix('NRapat')->group(function(){
     Route::get('/edit/{id}',[NotulesiRapatController::class, 'edit'])->name('nrapat.edit');
     Route::post('/update/{id}',[NotulesiRapatController::class, 'update'])->name('nrapat.update');
     Route::get('/delete/{id}',[NotulesiRapatController::class, 'destroy'])->name('nrapat.delete');
+});
+
+Route::prefix('kajur')->group(function(){
+    Route::get('/view/suratmasuk',[KajurController::class, 'indexSM'])->name('kajurSM.view');
+    Route::get('/view/suratkeluar',[KajurController::class, 'indexSK'])->name('kajurSK.view');
+    Route::get('/view/notulensirapat',[KajurController::class, 'indexNR'])->name('kajurNR.view');
 });
