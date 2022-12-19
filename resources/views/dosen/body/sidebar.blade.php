@@ -34,15 +34,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" id="disposisi_masuk">
+            <a href="{{route('DosenSM.view')}}" class="nav-link">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
-                Disposisi Masuk
+                Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" id="notulensi_rapat">
+            <a href="{{route('DosenNR.view')}}" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
                 Notulensi Rapat
@@ -51,7 +51,7 @@
           </li>
 
           <li class="nav-item fixed-bottom  text-center">
-            <a  href="#" class="nav-link bg-secondary" style="margin-left: 6px;">
+            <a  href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
               <p>Logout</p>
             </a>
           </li>

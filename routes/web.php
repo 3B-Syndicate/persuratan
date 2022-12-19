@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\SuratMasukController;
 use App\Http\Controllers\Backend\NotulesiRapatController;
 use App\Http\Controllers\Backend\KajurController;
 use App\Http\Controllers\Backend\KaprodiController;
+use App\Http\Controllers\Backend\DosenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -86,4 +87,9 @@ Route::prefix('kaprodi')->group(function(){
     Route::get('/view/suratmasuk',[KaprodiController::class, 'indexSM'])->name('kaprodiSM.view');
     Route::get('/view/suratkeluar',[KaprodiController::class, 'indexSK'])->name('kaprodiSK.view');
     Route::get('/view/notulensirapat',[KaprodiController::class, 'indexNR'])->name('kaprodiNR.view');
+});
+
+Route::prefix('dosen')->group(function(){
+    Route::get('/view/suratmasuk',[DosenController::class, 'indexSM'])->name('DosenSM.view');
+    Route::get('/view/notulensirapat',[DosenController::class, 'indexNR'])->name('DosenNR.view');
 });
