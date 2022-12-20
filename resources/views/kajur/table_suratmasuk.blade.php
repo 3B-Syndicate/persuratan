@@ -1,5 +1,6 @@
-@extends('kaprodi.kaprodi_master')
-@section('kaprodi')
+@extends('kajur.kajur_master')
+@section('kajur')
+
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -28,28 +29,28 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link">
+            <a href="{{route('dashboard')}}" class="nav-link ">
               <p>
                 Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('kaprodiSM.view')}}" class="nav-link" >
+            <a href="{{route('kajurSM.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('kaprodiSK.view')}}" class="nav-link" >
+            <a href="{{route('kajurSK.view')}}" class="nav-link">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('kaprodiNR.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kajurNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>
@@ -65,15 +66,16 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+  </aside>
 
-<div class="content-wrapper" style="background: gray;">
+
+  <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Notulensi Rapat</h1>
+                    <h1 class="m-0 text-dark">Surat Masuk</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -95,27 +97,27 @@
                                         <th style="width: 10px;">No</th>
                                         <th>Nomor Surat</th>
                                         <th>Tanggal Surat</th>
+                                        <th>Tanggal Surat Diterima</th>
+                                        <th>Pengirim Surat</th>
                                         <th>Perihal</th>
-                                        <th>Waktu</th>
-                                        <th>Tipe Rapat</th>
-                                        <th>Validasi</th>
-                                        <th>Notulensi</th>
+                                        <th>Disposisi</th>
+                                        <th>Lampiran</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($AllNotulesiRapat as $key => $nrapat)
+                                  @foreach($allSuratMasuk as $key=>$smasuk)
                                     <tr>
-                                        <td>{{$key+1}}</td>
-                                        <td>{{$nrapat->Nomor_Surat}}</td>
-                                        <td>{{$nrapat->Tanggal_Rapat}}</td>
-                                        <td>{{$nrapat->Ruang_Rapat}}</td>
-                                        <td>{{$nrapat->Perihal}}</td>
-                                        <td>{{$nrapat->Tipe_Rapat}}</td>
-                                        <td>{{$nrapat->Validasi}}</td>
-                                        <td>{{$nrapat->Notulensi}}</td>
+                                    <td>{{$key+1}}</td>
+                                        <td>{{$smasuk->Nomor_Surat}}</td>
+                                        <td>{{$smasuk->Tanggal_Surat}}</td>
+                                        <td>{{$smasuk->Tanggal_Diterima}}</td>
+                                        <td>{{$smasuk->Pengirim}}</td>
+                                        <td>{{$smasuk->Perihal}}</td>
+                                        <td>{{$smasuk->Disposisi}}</td>
+                                        <td>{{$smasuk->Lampiran}}</td>
                                         <td>
-                                          <div class="btn btn-primary">
+                                        <div class="btn btn-primary">
                                             <i class="fas fa-eye"></i>
                                                         Lihat
                                             </div>

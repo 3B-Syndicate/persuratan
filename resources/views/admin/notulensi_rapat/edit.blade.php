@@ -29,7 +29,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link text-dark">
+            <a href="{{route('dashboard')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -45,7 +45,7 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-            <li class="nav-item">
+              <li class="nav-item">
                 <a href="{{route('smasuk.view')}}" class="nav-link text-dark">
                   <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
@@ -60,7 +60,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="#" class="nav-link text-dark">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Surat Keluar
@@ -83,7 +83,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-dark">
+            <a href="#" class="nav-link text-dark active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>
                 Notulensi Rapat
@@ -93,13 +93,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route('nrapat.view')}}" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-envelope-open nav-icon"></i>
                   <p>Daftar Notulensi Rapat</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('nrapat.add')}}" class="nav-link text-dark">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Notulensi Rapat</p>
                 </a>
               </li>
@@ -116,7 +116,6 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
 
   <div class="content-wrapper" style="background: grey;">
     <!-- Content Header (Page header) -->
@@ -137,37 +136,46 @@
             <div class="row">
                 <div class="col-sm-12 col-xl-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <form method="post" action="{{route('skeluar.update', $editData->id)}}">
+                        <form method="post" action="{{route('nrapat.update', $editData->id)}}">
                             @csrf
                             <div class="row">
                                 <div class="col">
-                                    <div class="mb-1">
+                                <div class="mb-1">
                                         <div class="form-group row">
-                                            <label for="prodi" class="col-sm-2 col-form-label">Prodi</label>
+                                            <label for="ruang_rapat" class="col-sm-2 col-form-label">Ruang Rapat</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="prodi" class="form-control" id="prodi">
+                                                <input type="text" name="ruang_rapat" class="form-control"
+                                                    id="ruang_rapat">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-1">
                                         <div class="form-group row">
-                                            <label for="kepada" class="col-sm-2 col-form-label">Kepada</label>
+                                            <label for="tipe_rapat" class="col-sm-2 col-form-label">Tipe Rapat</label>
                                             <div class="col-sm-10">
-                                                <input type="text" name="kepada" class="form-control" id="kepada">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-1">
-                                        <div class="form-group row">
-                                            <label for="disposisi" class="col-sm-2 col-form-label">Disposisi</label>
-                                            <div class="col-sm-10">
-                                                <select name="disposisi" id="disposisi" class="form-control">
-                                                    <option selected="">Pilih Jenis disposisi</option>
+                                                <select name="tipe_rapat" id="tipe_rapat" class="form-control">
+                                                    <option selected="">Pilih Tipe Rapat</option>
                                                     <option value="Rahasia">Rahasia</option>
                                                     <option value="penting">Penting</option>
                                                     <option value="biasa">Biasa</option>
-                                                </select> 
-                                              </div>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="validasi" class="col-sm-2 col-form-label">Validasi</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="validasi" class="form-control" id="validasi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="notulensi" class="col-sm-2 col-form-label">Notulensi</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="notulensi" class="form-control" id="notulensi">
+                                            </div>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Simpan</button>

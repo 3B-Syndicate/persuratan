@@ -5,6 +5,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\SuratKeluarController;
 use App\Http\Controllers\Backend\SuratMasukController;
+use App\Http\Controllers\Backend\NotulesiRapatController;
+use App\Http\Controllers\Backend\KajurController;
+use App\Http\Controllers\Backend\KaprodiController;
+use App\Http\Controllers\Backend\DosenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,13 +34,16 @@ Route::middleware([
         // $user = DB::table('users')->get();
         // return view('dashboard');
         // return view('superadmin.index',['user' => $users]);
-        return view('admin.index');
 
         // if($users->usertype=="Super Admin"){
         //     return view('superadmin.index',['user' => $users]);
         // }
         // return view('superadmin.index',['user' => $user]);
+        // return view('superadmin.index');
+        // return view('admin.index');
         // return view('kaprodi.index');
+        // return view('kajur.index');
+        return view('dosen.index');
     })->name('dashboard');
 });
 
@@ -59,8 +66,37 @@ Route::prefix('SKeluar')->group(function(){
     Route::get('/delete/{id}',[SuratKeluarController::class, 'destroy'])->name('skeluar.delete');
 });
 
-Route::prefix('admin')->group(function(){
-    Route::get('/view',[SuratMasukController::class, 'SMView'])->name('admin.surat_masuk.table');
-    Route::get('/add',[SuratMasukController::class, 'SMAdd'])->name('admin.surat_masuk.create');
-    Route::get('/edit',[SuratMasukController::class, 'SMEdit'])->name('admin.surat_masuk.edit');
+Route::prefix('SMasuk')->group(function(){
+    Route::get('/view',[SuratMasukController::class, 'index'])->name('smasuk.view');
+    Route::get('/add',[SuratMasukController::class, 'create'])->name('smasuk.add');
+    Route::post('/store',[SuratMasukController::class, 'store'])->name('smasuk.store');
+    Route::get('/edit/{id}',[SuratMasukController::class, 'edit'])->name('smasuk.edit');
+    Route::post('/update/{id}',[SuratMasukController::class, 'update'])->name('smasuk.update');
+    Route::get('/delete/{id}',[SuratMasukController::class, 'destroy'])->name('smasuk.delete');
+});
+
+Route::prefix('NRapat')->group(function(){
+    Route::get('/view',[NotulesiRapatController::class, 'index'])->name('nrapat.view');
+    Route::get('/add',[NotulesiRapatController::class, 'create'])->name('nrapat.add');
+    Route::post('/store',[NotulesiRapatController::class, 'store'])->name('nrapat.store');
+    Route::get('/edit/{id}',[NotulesiRapatController::class, 'edit'])->name('nrapat.edit');
+    Route::post('/update/{id}',[NotulesiRapatController::class, 'update'])->name('nrapat.update');
+    Route::get('/delete/{id}',[NotulesiRapatController::class, 'destroy'])->name('nrapat.delete');
+});
+
+Route::prefix('kajur')->group(function(){
+    Route::get('/view/suratmasuk',[KajurController::class, 'indexSM'])->name('kajurSM.view');
+    Route::get('/view/suratkeluar',[KajurController::class, 'indexSK'])->name('kajurSK.view');
+    Route::get('/view/notulensirapat',[KajurController::class, 'indexNR'])->name('kajurNR.view');
+});
+
+Route::prefix('kaprodi')->group(function(){
+    Route::get('/view/suratmasuk',[KaprodiController::class, 'indexSM'])->name('kaprodiSM.view');
+    Route::get('/view/suratkeluar',[KaprodiController::class, 'indexSK'])->name('kaprodiSK.view');
+    Route::get('/view/notulensirapat',[KaprodiController::class, 'indexNR'])->name('kaprodiNR.view');
+});
+
+Route::prefix('dosen')->group(function(){
+    Route::get('/view/suratmasuk',[DosenController::class, 'indexSM'])->name('DosenSM.view');
+    Route::get('/view/notulensirapat',[DosenController::class, 'indexNR'])->name('DosenNR.view');
 });

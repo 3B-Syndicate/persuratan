@@ -45,13 +45,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.table')}}" class="nav-link text-dark">
+                <a href="{{route('smasuk.view')}}" class="nav-link text-dark">
                 <i class="fas fa-envelope nav-icon"></i>
                   <p>Daftar Surat Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('admin.surat_masuk.create')}}" class="nav-link text-dark active" style="background:lightgrey;">
+                <a href="{{route('smasuk.view')}}" class="nav-link text-dark active" style="background:lightgrey;">
                 <i class="fas fa-plus nav-icon"></i>
                   <p>Tambah Surat Masuk</p>
                 </a>
@@ -91,13 +91,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
+                <a href="{{route('nrapat.view')}}" class="nav-link text-dark">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Notulensi Rapat</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-dark">
+                <a href="{{route('nrapat.add')}}" class="nav-link text-dark">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Notulensi Rapat</p>
                 </a>
@@ -131,61 +131,59 @@
 
     <!-- Main content -->
     <section class="content" style="background: #ffc107;">
-        <div class="container-fluid pt-4 px-4">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-xl-12" style="margin-bottom:5%;">
                     <div class="bg-light rounded h-100 p-4">
-                        <form method="post" action="">
+                        <form method="post" action="{{route('smasuk.store')}}">
                             @csrf
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Nomor Surat</label>
+                                      <label for="Nomor_Surat" class="col-sm-2 col-form-label">Nomor Surat</label>
                                       <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input type="text" name="nomor_surat" class="form-control" id="nomor_surat" required placeholder="Ex: SM.yy.mm.dd.is; ">
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Tanggal Surat</label>
+                                      <label for="tanggalSurat" class="col-sm-2 col-form-label">Tanggal Surat</label>
                                       <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input type="date" name="tgl_surat" class="form-control" id="tanggal_surat" required>
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Tanggal Diterima</label>
+                                      <label for="tanggalDiterima" class="col-sm-2 col-form-label">Tanggal Diterima</label>
                                       <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input type="date" name="tgl_diterima" class="form-control" id="tanggal_diterima" required>
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Pengirim</label>
+                                      <label for="Pengirim" class="col-sm-2 col-form-label">Pengirim</label>
                                       <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input type="text" name="pengirim" class="form-control" id="pengirim" required>
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Perihal Surat</label>
+                                      <label for="perihalSurat" class="col-sm-2 col-form-label">Perihal Surat</label>
                                       <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input type="text" name="perihal" class="form-control" id="perihal" required>
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Disposisi</label>
+                                      <label for="Disposisi" class="col-sm-2 col-form-label">Jenis Disposisi</label>
                                       <div class="col-sm-10">
-                                        <select name="selectUser" id="selectUser" class="form-control" aria-label="Default select example">
-                                          <option selected="">Pilih disposisi </option>
-                                          <option value="">A</option>
-                                          <option value="">B</option>
-                                          <option value="">C</option>
-                                          <option value="">D</option>
-                                          <option value="">E</option>
+                                        <select name="disposisi" id="disposisi" class="form-control" aria-label="Default select example">
+                                          <option selected="selected" disabled>--- Pilih disposisi ---</option>
+                                          <option value="Rahasia">Rahasia</option>
+                                          <option value="Penting">Penting</option>
+                                          <option value="Biasa">Biasa</option>
                                         </select>
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran</label>
+                                      <label for="Lampiran" class="col-sm-2 col-form-label">Lampiran</label>
                                       <div class="col-sm-10">
-                                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                                        <input type="Lampiran" name="lampiran" class="form-control" id="lampiran" required>
                                       </div>
                                     </div>
                                 </div>

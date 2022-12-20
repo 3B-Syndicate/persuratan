@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:black;">
+<aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{{asset('assets/images/logo-TI_Poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -26,32 +26,28 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:yellow;">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Dashboard
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="{{route('kajurSM.view')}}" class="nav-link">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="{{route('kajurSK.view')}}" class="nav-link">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('user.view')}}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+            <a href="{{route('kajurNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>

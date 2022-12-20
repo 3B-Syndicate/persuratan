@@ -1,5 +1,6 @@
-@extends('kaprodi.kaprodi_master')
-@section('kaprodi')
+@extends('kajur.kajur_master')
+@section('kajur')
+
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
@@ -35,21 +36,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('kaprodiSM.view')}}" class="nav-link" >
+            <a href="{{route('kajurSM.view')}}" class="nav-link">
               <p>
                 Surat Masuk
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('kaprodiSK.view')}}" class="nav-link" >
+            <a href="{{route('kajurSK.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Surat Keluar
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('kaprodiNR.view')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kajurNR.view')}}" class="nav-link">
               <p>
                 Notulensi Rapat
               </p>
@@ -65,15 +66,16 @@
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-</aside>
+  </aside>
 
-<div class="content-wrapper" style="background: gray;">
+
+  <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Notulensi Rapat</h1>
+                    <h1 class="m-0 text-dark">Surat Keluar</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -96,26 +98,24 @@
                                         <th>Nomor Surat</th>
                                         <th>Tanggal Surat</th>
                                         <th>Perihal</th>
-                                        <th>Waktu</th>
-                                        <th>Tipe Rapat</th>
-                                        <th>Validasi</th>
-                                        <th>Notulensi</th>
+                                        <th>Prodi</th>
+                                        <th>Kepada</th>
+                                        <th>Disposisi</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($AllNotulesiRapat as $key => $nrapat)
+                                @foreach($allSuratKeluar as $key => $skeluar)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td>{{$nrapat->Nomor_Surat}}</td>
-                                        <td>{{$nrapat->Tanggal_Rapat}}</td>
-                                        <td>{{$nrapat->Ruang_Rapat}}</td>
-                                        <td>{{$nrapat->Perihal}}</td>
-                                        <td>{{$nrapat->Tipe_Rapat}}</td>
-                                        <td>{{$nrapat->Validasi}}</td>
-                                        <td>{{$nrapat->Notulensi}}</td>
+                                        <td>{{$skeluar->Nomor_Surat}}</td>
+                                        <td>{{$skeluar->Tanggal_Surat}}</td>
+                                        <td>{{$skeluar->Perihal}}</td>
+                                        <td>{{$skeluar->Prodi}}</td>
+                                        <td>{{$skeluar->Kepada}}</td>
+                                        <td>{{$skeluar->Disposisi}}</td>
                                         <td>
-                                          <div class="btn btn-primary">
+                                        <div class="btn btn-primary">
                                             <i class="fas fa-eye"></i>
                                                         Lihat
                                             </div>
