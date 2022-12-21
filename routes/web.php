@@ -40,10 +40,10 @@ Route::middleware([
         // }
         // return view('superadmin.index',['user' => $user]);
         // return view('superadmin.index');
-        // return view('admin.index');
+        return view('admin.index');
         // return view('kaprodi.index');
         // return view('kajur.index');
-        return view('dosen.index');
+        // return view('dosen.index');
     })->name('dashboard');
 });
 
