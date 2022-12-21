@@ -33,10 +33,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         // return view('dashboard');
         // return view('superadmin.index');
-        // return view('admin.index');
+        return view('admin.index');
         // return view('kaprodi.index');
         // return view('kajur.index');
-        return view('dosen.index');
+        // return view('dosen.index');
     })->name('dashboard');
 });
 
