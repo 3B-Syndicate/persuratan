@@ -86,11 +86,11 @@
                                     <select name="selectUser" id="selectUser" class="form-select mb-3"
                                         aria-label="Default select example">
                                         <option selected="">Pilih Roles </option>
-                                        <option value="admin">Super Admin</option>
-                                        <option value="admin_jurusan">Admin Jurusan</option>
-                                        <option value="kajur">Kajur</option>
-                                        <option value="kaprodi">Kaprodi</option>
-                                        <option value="dosen">Dosen</option>
+                                        <option value="Super Admin">Super Admin</option>
+                                        <option value="Admin Jurusan">Admin Jurusan</option>
+                                        <option value="Kajur">Kajur</option>
+                                        <option value="Kaprodi">Kaprodi</option>
+                                        <option value="Dosen">Dosen</option>
                                     </select>
                                 </div>
                             </div>
