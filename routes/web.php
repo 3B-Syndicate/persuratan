@@ -32,11 +32,11 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         // return view('dashboard');
-        // return view('superadmin.index');
+        return view('superadmin.index');
         // return view('admin.index');
         // return view('kaprodi.index');
         // return view('kajur.index');
-        return view('dosen.index');
+        // return view('dosen.index');
     })->name('dashboard');
 });
 
@@ -46,7 +46,7 @@ Route::prefix('super')->group(function(){
     Route::get('/add',[UserController::class, 'UserAdd'])->name('user.add');
     Route::post('/store',[UserController::class, 'UserStore'])->name('users.store');
     Route::get('/edit/{id}',[UserController::class, 'UserEdit'])->name('users.edit');
-    Route::post('/update/{id}',[UserController::class, 'UsersUpdate'])->name('users.update');
+    Route::post('/update/{id}',[UserController::class, 'UserUpdate'])->name('users.update');
     Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
 });
 

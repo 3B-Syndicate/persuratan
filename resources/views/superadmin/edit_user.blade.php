@@ -3,7 +3,7 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#ffc107;">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="{{asset('assets/images/logo-TI_Poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{asset('assets/images/logo_poliwangi.png')}}" alt="TI POLIWANGI" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">TI POLIWANGI</span>
     </a>
 
@@ -82,11 +82,11 @@
                                     <select name="selectUser" id="selectUser" class="form-select mb-3"
                                         aria-label="Default select example">
                                         <option selected="" disabled>--- Pilih Roles ---</option>
-                                        <option value="superadmin" {{($editData->usertype=="admin"? "selected":"")}}>Super Admin</option>
-                                        <option value="admin_jurusan" {{($editData->usertype=="admin_jurusan"? "selected":"")}}>Admin Jurusan</option>
-                                        <option value="kajur" {{($editData->usertype=="kajur"? "selected":"")}}>Kajur</option>
-                                        <option value="kaprodi" {{($editData->usertype=="kaprodi"? "selected":"")}}>Kaprodi</option>
-                                        <option value="dosen" {{($editData->usertype=="dosen"? "selected":"")}}>Dosen</option>
+                                        <option value="Super Admin" {{($editData->usertype=="admin"? "selected":"")}}>Super Admin</option>
+                                        <option value="Admin Jurusan" {{($editData->usertype=="admin_jurusan"? "selected":"")}}>Admin Jurusan</option>
+                                        <option value="Kajur" {{($editData->usertype=="kajur"? "selected":"")}}>Kajur</option>
+                                        <option value="Kaprodi" {{($editData->usertype=="kaprodi"? "selected":"")}}>Kaprodi</option>
+                                        <option value="Dosen" {{($editData->usertype=="dosen"? "selected":"")}}>Dosen</option>
                                     </select>
                                     <div class="row">
                                         <div class="col">
