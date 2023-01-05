@@ -9,9 +9,7 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{Auth::user()->profile_photo_url}}" class="img-circle elevation-2" alt="{{Auth::user()->name }}">
-        </div>
+         
         <div class="info">
           <a href="#" class="d-block">
           {{ Auth::user()->name }}
@@ -26,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link active text-dark" style="background:yellow;">
+            <a href="{{route('super.dashboard')}}" class="nav-link active text-dark" style="background:yellow;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -42,8 +40,8 @@
             </a>
           </li>
           <li class="nav-item fixed-bottom">
-            <a href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
-              <p>Logout</p>
+            <a href="{{route('logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
+              <p>Keluar</p>
             </a>
           </li>
         </ul>

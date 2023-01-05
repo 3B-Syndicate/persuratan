@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Persuratan [BETA]</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,7 +25,33 @@
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                        @if(Auth::user()->usertype=="Super Admin")        
+                        <a href="{{ route('super.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        @endif
+                        @if(Auth::user()->usertype=="Admin Jurusan")        
+                        <a href="{{ route('admin.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        @endif
+                        @if(Auth::user()->usertype=="Kajur")        
+                        <a href="{{ route('kajur.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        @endif
+                        @if(Auth::user()->usertype=="Kaprodi")        
+                        <a href="{{ route('kaprodi.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        @endif
+                        @if(Auth::user()->usertype=="Dosen")        
+                        <a href="{{ route('dosen.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        @endif
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
