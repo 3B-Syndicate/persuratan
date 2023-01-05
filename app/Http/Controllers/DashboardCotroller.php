@@ -3,30 +3,50 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\NotulensiRapat;
+use App\Models\SuratMasuk;
+use App\Models\SuratKeluar;
 
 class DashboardCotroller extends Controller
 {
     public function super()
     {
-        return view('superadmin.index');
+        $userCount = User::count();
+        return view('superadmin.index', compact('userCount'));
     } 
   
     public function adminHome()
     {
-        return view('admin.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+        $SKCount = SuratKeluar::count();
+
+        return view('admin.index', compact('NRCount','SMCount','SKCount'));
     }
-    
+  
     public function kajurHome()
     {
-        return view('kajur.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+        $SKCount = SuratKeluar::count();
+
+        return view('kajur.index', compact('NRCount','SMCount','SKCount'));
     }
 
     public function kaprodiHome()
     {
-        return view('kaprodi.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+        $SKCount = SuratKeluar::count();
+
+        return view('kaprodi.index', compact('NRCount','SMCount','SKCount'));
     }
     public function dosenHome()
     {
-        return view('dosen.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+
+        return view('dosen.index', compact('NRCount','SMCount'));
     }
 }

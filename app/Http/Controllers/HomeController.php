@@ -3,55 +3,55 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\NotulensiRapat;
+use App\Models\SuratMasuk;
+use App\Models\SuratKeluar;
   
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
   
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function super()
     {
-        return view('superadmin.index');
+        $userCount = User::count();
+        return view('superadmin.index', compact('userCount'));
     } 
   
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function adminHome()
     {
-        return view('admin.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+        $SKCount = SuratKeluar::count();
+
+        return view('admin.index', compact('NRCount','SMCount','SKCount'));
     }
   
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function kajurHome()
     {
-        return view('kajur.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+        $SKCount = SuratKeluar::count();
+
+        return view('kajur.index', compact('NRCount','SMCount','SKCount'));
     }
 
     public function kaprodiHome()
     {
-        return view('kaprodi.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+        $SKCount = SuratKeluar::count();
+
+        return view('kaprodi.index', compact('NRCount','SMCount','SKCount'));
     }
     public function dosenHome()
     {
-        return view('dosen.index');
+        $NRCount = NotulensiRapat::count();
+        $SMCount = SuratMasuk::count();
+
+        return view('dosen.index', compact('NRCount','SMCount'));
     }
 }

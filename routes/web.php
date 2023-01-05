@@ -7,7 +7,7 @@ use App\Http\Controllers\DashboardCotroller;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\SuratKeluarController;
 use App\Http\Controllers\Backend\SuratMasukController;
-use App\Http\Controllers\Backend\NotulesiRapatController;
+use App\Http\Controllers\Backend\NotulensiRapatController;
 use App\Http\Controllers\Backend\KajurController;
 use App\Http\Controllers\Backend\KaprodiController;
 use App\Http\Controllers\Backend\DosenController;
@@ -97,12 +97,12 @@ Route::prefix('adminjurusan/SMasuk')->group(function(){
 });
 
 Route::prefix('adminjurusan/NRapat')->group(function(){
-    Route::get('/view',[NotulesiRapatController::class, 'index'])->name('nrapat.view');
-    Route::get('/add',[NotulesiRapatController::class, 'create'])->name('nrapat.add');
-    Route::post('/store',[NotulesiRapatController::class, 'store'])->name('nrapat.store');
-    Route::get('/edit/{id}',[NotulesiRapatController::class, 'edit'])->name('nrapat.edit');
-    Route::post('/update/{id}',[NotulesiRapatController::class, 'update'])->name('nrapat.update');
-    Route::get('/delete/{id}',[NotulesiRapatController::class, 'destroy'])->name('nrapat.delete');
+    Route::get('/view',[NotulensiRapatController::class, 'index'])->name('nrapat.view');
+    Route::get('/add',[NotulensiRapatController::class, 'create'])->name('nrapat.add');
+    Route::post('/store',[NotulensiRapatController::class, 'store'])->name('nrapat.store');
+    Route::get('/edit/{id}',[NotulensiRapatController::class, 'edit'])->name('nrapat.edit');
+    Route::post('/update/{id}',[NotulensiRapatController::class, 'update'])->name('nrapat.update');
+    Route::get('/delete/{id}',[NotulensiRapatController::class, 'destroy'])->name('nrapat.delete');
 });
 
 Route::prefix('kajur')->group(function(){

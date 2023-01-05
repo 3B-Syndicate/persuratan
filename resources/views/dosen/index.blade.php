@@ -22,7 +22,7 @@
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
-                <h3>10</h3>
+                <h3>{{$SMCount}}</h3>
 
                 <p>Surat Masuk</p>
               </div>
@@ -34,7 +34,7 @@
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
-                <h3>7</h3>
+                <h3>{{$NRCount}}</h3>
 
                 <p>Notulensi Rapat</p>
               </div>

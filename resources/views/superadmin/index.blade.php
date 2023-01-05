@@ -76,7 +76,7 @@
             <!-- small box -->
             <div class="small-box" style="background: lightyellow;">
               <div class="inner">
-                <h3>10</h3>
+                <h3>{{$userCount}}</h3>
 
                 <p>Jumlah User</p>
               </div>

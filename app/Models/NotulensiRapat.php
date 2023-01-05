@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NotulesiRapat extends Model
+class NotulensiRapat extends Model
 {
     use HasFactory;
 }
