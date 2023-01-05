@@ -24,7 +24,7 @@
               <div class="inner">
                 <h3>10</h3>
 
-                <p>Disposisi Masuk</p>
+                <p>Surat Masuk</p>
               </div>
               <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>

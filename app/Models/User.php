@@ -24,7 +24,6 @@ class User extends Authenticatable
         'email',
         'usertype',
         'password',
-        'type'
     ];
   
     /**
@@ -54,10 +53,5 @@ class User extends Authenticatable
      * @param  string  $value
      * @return \Illuminate\Database\Eloquent\Casts\Attribute
      */
-    protected function type(): Attribute
-    {
-        return new Attribute(
-            get: fn ($value) =>  ["Dosen", "Super Admin", "Admin Jurusan", "Kajur", "Kaprodi"][$value],
-        );
-    }
+    
 }

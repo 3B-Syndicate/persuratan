@@ -55,7 +55,7 @@
 
           <li class="nav-item fixed-bottom  text-center">
             <a  href="{{route('logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
-              <p>Logout</p>
+              <p>Keluar</p>
             </a>
           </li>
         </ul>

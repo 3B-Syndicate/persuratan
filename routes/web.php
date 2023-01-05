@@ -4,6 +4,13 @@ use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardCotroller;
+use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\SuratKeluarController;
+use App\Http\Controllers\Backend\SuratMasukController;
+use App\Http\Controllers\Backend\NotulesiRapatController;
+use App\Http\Controllers\Backend\KajurController;
+use App\Http\Controllers\Backend\KaprodiController;
+use App\Http\Controllers\Backend\DosenController;
   
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +24,7 @@ use App\Http\Controllers\DashboardCotroller;
 */
   
 Route::get('/', function () {
-    return view('welcome');
+    return Redirect()->route('login');
 });
 
 Auth::routes();
