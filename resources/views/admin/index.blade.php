@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+
 <div class="content-wrapper" style="background: gray;">
     <!-- Content Header (Page header) -->
     <div class="content-header" style="background: #ffc107;">

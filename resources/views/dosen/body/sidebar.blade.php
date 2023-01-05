@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('dashboard') }}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{ route('dosen.dashboard') }}" class="nav-link active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -51,7 +51,7 @@
           </li>
 
           <li class="nav-item fixed-bottom  text-center">
-            <a  href="{{route('superadmin.logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
+            <a  href="{{route('logout')}}" class="nav-link bg-secondary" style="margin-left: 6px;">
               <p>Logout</p>
             </a>
           </li>
