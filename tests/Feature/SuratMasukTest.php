@@ -35,11 +35,11 @@ class SuratMasukTest extends TestCase
         $this->visit('adminjurusan/SMasuk/add');
 
         $this->submitForm('Simpan', [
-            'nomor_surat' => '8s34328',
-            'tgl_surat'=>'2020-08-12',
-            'tgl_diterima'=>'2022-09-02',
-            'pengirim'=>'sdsantiio',
-            'perihal'=>'nhaowr',
+            'nomor_surat' => 'SMhdh089328',
+            'tgl_surat'=>'2021-08-14',
+            'tgl_diterima'=>'2021-08-14',
+            'pengirim'=>'sdsanjhtisddio',
+            'perihal'=>'nhaossssdwr',
             'disposisi'=>'Biasa',
             'lampiran'=>'haug'
         ]);

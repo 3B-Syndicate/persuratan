@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\SuratMasuk;
-use App\Models\surat_keluar;
-use App\Models\notulensi_rapat;
+use App\Models\SuratKeluar;
+use App\Models\NotulensiRapat;
 use Illuminate\Http\Request;
 
 class kaprodiController extends Controller
@@ -18,13 +18,13 @@ class kaprodiController extends Controller
 
     public function indexSK()
     {
-        $data['allSuratKeluar']=surat_keluar::all();
+        $data['allSuratKeluar']=SuratKeluar::all();
         return view('kaprodi.table_suratkeluar', $data);
     }
 
     public function indexNR()
     {
-        $data['AllNotulesiRapat']=notulensi_rapat::all();
+        $data['AllNotulesiRapat']=NotulensiRapat::all();
         return view('kaprodi.table_hasilrapat', $data);
     }
 }

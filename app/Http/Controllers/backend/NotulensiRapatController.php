@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\NotulensiRapat;
 use Illuminate\Http\Request;
 
-class NotulesiRapatController extends Controller
+class NotulensiRapatController extends Controller
 {
     public function index()
     {

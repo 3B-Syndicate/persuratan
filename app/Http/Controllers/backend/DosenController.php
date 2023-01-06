@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\SuratMasuk;
-use App\Models\notulensi_rapat;
+use App\Models\NotulensiRapat;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
@@ -17,7 +17,7 @@ class DosenController extends Controller
 
     public function indexNR()
     {
-        $data['AllNotulesiRapat']=notulensi_rapat::all();
+        $data['AllNotulesiRapat']=NotulensiRapat::all();
         return view('dosen.table_hasilrapat', $data);
     }
 }

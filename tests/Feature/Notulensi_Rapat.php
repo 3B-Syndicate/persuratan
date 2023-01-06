@@ -10,11 +10,6 @@ class Notulensi_Rapat extends TestCase
 {
     public function test_create_notulensirapat(){
 
-        // $user = factory(User::class)->create([
-        //     'email'    => 'dosen@gmail.com',
-        //     'password' => bcrypt('12345678'),
-        // ]);
-
         // Kunjungi halaman '/login'
         $this->visit('/login');
 
@@ -34,8 +29,7 @@ class Notulensi_Rapat extends TestCase
         $this->visit('adminjurusan/NRapat/add');
 
         $this->submitForm('Simpan', [
-            'nomor_surat' => '23333',
-            'tanggal_surat'=>'2/2/2002',
+            'tanggal_rapat'=>'2-2-2002',
             'ruang_rapat'=>'tuk',
             'perihal'=>'aaa',
             'tipe_rapat'=>'Biasa',
@@ -45,7 +39,7 @@ class Notulensi_Rapat extends TestCase
         // $this->seeInDatabase('SKeluar', [
         //     'perihal'=>'222'
         // ]);
-        $this->seePageIs('/NRapat/view');
+        $this->seePageIs('adminjurusan/NRapat/view');
 
         $this->see('b');
     }
