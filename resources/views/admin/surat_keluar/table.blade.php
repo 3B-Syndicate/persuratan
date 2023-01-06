@@ -167,6 +167,15 @@
                                           <a href="{{route('skeluar.delete', $skeluar->id)}}" id="delete" class="btn btn-danger" title="Hapus">
                                             <i class="fas fa-trash"></i>
                                           </a>
+                                          <div class="btn btn-primary" data-toggle="dropdown" title="Opsi">
+                                                <i class="fas fa-cog"></i>
+                                                <div class="dropdown-menu" style="margin-right:3%;padding:3px;">
+                                                    <a class="btn btn-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                        Lihat
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     @endforeach
