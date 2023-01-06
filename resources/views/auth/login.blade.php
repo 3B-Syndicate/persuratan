@@ -22,7 +22,7 @@
         <a class="h1"><b>TI POLIWANGI</b></a>
       </div>
       <div class="card-body">
-        <p class="login-box-msg">Masuk Dengan Akun Anda</p>
+        <p class="login-box-msg">Masukkan Akun Anda</p>
         <form action="{{route('login')}}" method="post">
           @csrf
           <div class="input-group mb-3">

@@ -145,7 +145,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary position-relative">Submit</button>
+                            <button type="submit" class="btn btn-primary position-relative">Simpan</button>
                         </form>
                     </div>
                 </div>
