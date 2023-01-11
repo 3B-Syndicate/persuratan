@@ -26,7 +26,7 @@
 
                 <p>Surat Masuk</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('DosenSM.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -38,7 +38,7 @@
 
                 <p>Notulensi Rapat</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('DosenNR.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ route('dosen.dashboard') }}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{ route('dosen.home') }}" class="nav-link active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard

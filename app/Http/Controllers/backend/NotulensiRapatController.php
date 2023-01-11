@@ -36,6 +36,12 @@ class NotulensiRapatController extends Controller
         return redirect()->route('nrapat.view')->with('info','Data added Successfully'); 
     }
 
+    public function show($id)
+    {
+        $showData = NotulensiRapat::find($id);
+        return view('view_notulensiR', compact('showData'));
+    }
+
     public function edit($id)
     {
         $editData = NotulensiRapat::find($id);

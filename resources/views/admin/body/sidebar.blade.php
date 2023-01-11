@@ -11,7 +11,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
          
         <div class="info">
-          <a href="{{route('admin.dashboard')}}" class="d-block">
+          <a href="{{route('admin.home')}}" class="d-block">
           {{ Auth::user()->name }}
           </a>
         </div>
@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('admin.dashboard')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('admin.home')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard

@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('kaprodi.dashboard')}}" class="nav-link">
+            <a href="{{route('kaprodi.home')}}" class="nav-link">
               <p>
                 Dashboard
               </p>

@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('admin.dashboard')}}" class="nav-link">
+            <a href="{{route('admin.home')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -139,7 +139,7 @@
                                 <div class="col">
                                     <div class="form-group row">
                                       <label for="isiDisposisi" class="col-sm-2 col-form-label">Isi Disposisi</label>
-                                      <div class="col-sm-10">
+                                      <div class="col-sm-12">
                                         <textarea type="text" name="isi_disposisi" class="form-control" id="isi_disposisi"></textarea>
                                       </div>
                                     </div>

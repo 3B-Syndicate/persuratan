@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DashboardCotroller;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\SuratKeluarController;
 use App\Http\Controllers\Backend\SuratMasukController;
@@ -62,12 +61,6 @@ Route::get('logout', function ()
     return Redirect::to('/');
 })->name('logout');
 
-Route::get('/superadmin/dash-board', [DashboardCotroller::class, 'super'])->name('super.dashboard');
-Route::get('/adminjurusan/dash-board', [DashboardCotroller::class, 'adminHome'])->name('admin.dashboard');
-Route::get('/Kajur/dash-board', [DashboardCotroller::class, 'kajurHome'])->name('kajur.dashboard');
-Route::get('/Kaprodi/dash-board', [DashboardCotroller::class, 'kaprodiHome'])->name('kaprodi.dashboard');
-Route::get('/dosen/dash-board', [DashboardCotroller::class, 'dosenHome'])->name('dosen.dashboard');
-
 // route backend
 Route::prefix('superadmin')->group(function(){
     Route::get('/view',[UserController::class, 'UserView'])->name('user.view');
@@ -82,6 +75,7 @@ Route::prefix('adminjurusan/SKeluar')->group(function(){
     Route::get('/view',[SuratKeluarController::class, 'index'])->name('skeluar.view');
     Route::get('/add',[SuratKeluarController::class, 'create'])->name('skeluar.add');
     Route::post('/store',[SuratKeluarController::class, 'store'])->name('skeluar.store');
+    Route::get('/show/{id}',[SuratKeluarController::class, 'show'])->name('skeluar.show');
     Route::get('/edit/{id}',[SuratKeluarController::class, 'edit'])->name('skeluar.edit');
     Route::post('/update/{id}',[SuratKeluarController::class, 'update'])->name('skeluar.update');
     Route::get('/delete/{id}',[SuratKeluarController::class, 'destroy'])->name('skeluar.delete');
@@ -91,6 +85,7 @@ Route::prefix('adminjurusan/SMasuk')->group(function(){
     Route::get('/view',[SuratMasukController::class, 'index'])->name('smasuk.view');
     Route::get('/add',[SuratMasukController::class, 'create'])->name('smasuk.add');
     Route::post('/store',[SuratMasukController::class, 'store'])->name('smasuk.store');
+    Route::get('/show/{id}',[SuratMasukController::class, 'show'])->name('smasuk.show');
     Route::get('/edit/{id}',[SuratMasukController::class, 'edit'])->name('smasuk.edit');
     Route::post('/update/{id}',[SuratMasukController::class, 'update'])->name('smasuk.update');
     Route::get('/delete/{id}',[SuratMasukController::class, 'destroy'])->name('smasuk.delete');
@@ -100,6 +95,7 @@ Route::prefix('adminjurusan/NRapat')->group(function(){
     Route::get('/view',[NotulensiRapatController::class, 'index'])->name('nrapat.view');
     Route::get('/add',[NotulensiRapatController::class, 'create'])->name('nrapat.add');
     Route::post('/store',[NotulensiRapatController::class, 'store'])->name('nrapat.store');
+    Route::get('/show/{id}',[NotulensiRapatController::class, 'show'])->name('nrapat.show');
     Route::get('/edit/{id}',[NotulensiRapatController::class, 'edit'])->name('nrapat.edit');
     Route::post('/update/{id}',[NotulensiRapatController::class, 'update'])->name('nrapat.update');
     Route::get('/delete/{id}',[NotulensiRapatController::class, 'destroy'])->name('nrapat.delete');

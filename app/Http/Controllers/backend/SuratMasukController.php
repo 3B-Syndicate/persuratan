@@ -31,7 +31,12 @@ class SuratMasukController extends Controller
         $data->Lampiran=$request->lampiran;
         
         $data->save();
-        return redirect()->route('smasuk.view')->with('info','Data added Successfully');     
+        return redirect()->route('smasuk.view')->with('message', 'data berhasil ditambah');    
+    }
+    public function show($id)
+    {
+        $showData = SuratMasuk::find($id);
+        return view('view_suratM', compact('showData'));
     }
 
     public function edit($id)

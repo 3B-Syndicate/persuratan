@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('admin.dashboard')}}" class="nav-link">
+            <a href="{{route('admin.home')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -169,7 +169,7 @@
                                             <div class="btn btn-primary" data-toggle="dropdown" title="Opsi">
                                                 <i class="fas fa-cog"></i>
                                                 <div class="dropdown-menu" style="margin-right:3%;padding:3px;">
-                                                    <a class="btn btn-primary">
+                                                    <a class="btn btn-primary" href="{{route('smasuk.show', $smasuk->id)}}">
                                                         <i class="fas fa-eye"></i>
                                                         Lihat
                                                     </a>
@@ -186,4 +186,11 @@
     </section>
     <!-- /.content -->
 </div>
+<script>@if(Session::has('info'))
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true
+        }
+        toastr.info("{{ session('info') }}");
+        @endif</script>
 @endsection

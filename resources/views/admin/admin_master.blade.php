@@ -50,6 +50,11 @@
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
+  @if(session('message'))
+	<div class="alert alert-success">
+		{{ session('message')}}
+	</div>
+@endif
 </script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
