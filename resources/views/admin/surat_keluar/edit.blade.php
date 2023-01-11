@@ -122,7 +122,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="content" style="text-colour: black;">Tambah Surat Keluar</h1>
+                    <h1 class="content" style="text-colour: black;">Edit Surat Keluar</h1>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
