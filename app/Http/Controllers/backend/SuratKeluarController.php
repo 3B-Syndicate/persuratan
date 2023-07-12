@@ -30,9 +30,16 @@ class SuratKeluarController extends Controller
         $data->Prodi=$request->prodi;
         $data->Kepada=$request->kepada;
         $data->Disposisi=$request->disposisi;
+        $data->Isi_Disposisi=$request->isi_disposisi;
         
         $data->save();
         return redirect()->route('skeluar.view')->with('info','Data added Successfully');     
+    }
+
+    public function show($id)
+    {
+        $showData = SuratKeluar::find($id);
+        return view('view_suratK', compact('showData'));
     }
 
     public function edit($id)

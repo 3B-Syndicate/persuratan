@@ -26,7 +26,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('super.dashboard')}}" class="nav-link active text-dark" style="background:lightgray;">
+            <a href="{{route('super.home')}}" class="nav-link active text-dark" style="background:lightgray;">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard

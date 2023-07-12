@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('kajur.dashboard')}}" class="nav-link active text-dark" style="background:lightgrey;">
+            <a href="{{route('kajur.home')}}" class="nav-link active text-dark" style="background:lightgrey;">
               <p>
                 Dashboard
               </p>

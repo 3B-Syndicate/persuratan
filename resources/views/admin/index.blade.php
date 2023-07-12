@@ -19,47 +19,36 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box" style="background: lightyellow;">
+            <div class="small-box" style="background: #007BFF;">
               <div class="inner">
                 <h3>{{$SMCount}}</h3>
                 <p>Surat Masuk</p>
               </div>
-              <a href="{{route('skeluar.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('skeluar.view')}}" style="background: lightyellow;" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box" style="background: lightyellow;">
+            <div class="small-box" style="background: #28A745;">
               <div class="inner">
                 <h3>{{$SKCount}}</h3>
                 <p>Surat Keluar</p>
               </div>
-              <a href="{{route('skeluar.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('skeluar.view')}}" style="background: lightyellow;" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box" style="background: lightyellow;">
+            <div class="small-box" style="background: #1DAEFF;">
               <div class="inner">
                 <h3>{{$NRCount}}</h3>
                 <p>Notulensi Rapat</p>
               </div>
-              <a href="{{route('nrapat.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('nrapat.view')}}" style="background: lightyellow;" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box" style="background: lightyellow;">
-              <div class="inner">
-                <h3>3</h3>
-                <p>Surat Tugas Pegawai</p>
-              </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
         <!-- /.row -->
         <!-- Main row -->

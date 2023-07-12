@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\NotulensiRapat;
 use Illuminate\Http\Request;
 
-class NotulesiRapatController extends Controller
+class NotulensiRapatController extends Controller
 {
     public function index()
     {
@@ -34,6 +34,12 @@ class NotulesiRapatController extends Controller
         
         $data->save();
         return redirect()->route('nrapat.view')->with('info','Data added Successfully'); 
+    }
+
+    public function show($id)
+    {
+        $showData = NotulensiRapat::find($id);
+        return view('view_notulensiR', compact('showData'));
     }
 
     public function edit($id)

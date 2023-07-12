@@ -38,19 +38,19 @@
                                     </form>
                                 </div>
                         @if(Auth::user()->usertype=="Super Admin")        
-                        <a href="{{ route('super.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        <a href="{{ route('super.home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
                         @endif
                         @if(Auth::user()->usertype=="Admin Jurusan")        
-                        <a href="{{ route('admin.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        <a href="{{ route('admin.home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
                         @endif
                         @if(Auth::user()->usertype=="Kajur")        
-                        <a href="{{ route('kajur.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        <a href="{{ route('kajur.home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
                         @endif
                         @if(Auth::user()->usertype=="Kaprodi")        
-                        <a href="{{ route('kaprodi.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        <a href="{{ route('kaprodi.home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
                         @endif
                         @if(Auth::user()->usertype=="Dosen")        
-                        <a href="{{ route('dosen.dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
+                        <a href="{{ route('dosen.home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">dashboard</a>
                         @endif
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>

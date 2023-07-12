@@ -13,12 +13,8 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="{{Auth::user()->profile_photo_url}}" class="img-circle elevation-2"
-                    alt="{{Auth::user()->name }}">
-            </div>
             <div class="info">
-                <a href="{{route('admin.dashboard')}}" class="d-block">
+                <a href="{{route('admin.home')}}" class="d-block">
                     {{ Auth::user()->name }}
                 </a>
             </div>
@@ -32,7 +28,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{route('admin.dashboard')}}" class="nav-link">
+                    <a href="{{route('admin.home')}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -49,13 +45,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">
+                            <a href="{{route('smasuk.view')}}" class="nav-link text-dark">
                                 <i class="fas fa-envelope nav-icon"></i>
                                 <p>Daftar Surat Masuk</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-dark">
+                            <a href="{{route('smasuk.view')}}" class="nav-link text-dark">
                                 <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Surat Masuk</p>
                             </a>
@@ -96,13 +92,13 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('nrapat.view')}}" class="nav-link text-dark">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-envelope-open nav-icon"></i>
                                 <p>Daftar Notulensi Rapat</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('nrapat.add')}}" class="nav-link text-dark">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-plus nav-icon"></i>
                                 <p>Tambah Notulensi Rapat</p>
                             </a>
                         </li>
@@ -190,6 +186,14 @@
                                               </div>
                                         </div>
                                     </div>
+                                    <div class="mb-1">
+                                        <div class="form-group row">
+                                            <label for="isiDisposisi" class="col-sm-2 col-form-label">Isi Disposisi</label>
+                                            <div class="col-sm-10">
+                                                <textarea type="text" name="isi_disposisi" class="form-control" id="isi_disposisi"></textarea>
+                                            </div>
+                                        </div>
+                                </div>
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>
                             </div>

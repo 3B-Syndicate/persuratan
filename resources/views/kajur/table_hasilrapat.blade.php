@@ -27,7 +27,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('kajur.dashboard')}}" class="nav-link">
+            <a href="{{route('kajur.home')}}" class="nav-link">
               <p>
                 Dashboard
               </p>
@@ -115,10 +115,10 @@
                                         <td>{{$nrapat->Validasi}}</td>
                                         <td>{{$nrapat->Notulensi}}</td>
                                         <td>
-                                          <div class="btn btn-primary">
+                                          <button class="btn btn-primary" href="{{route('nrapat.show', $nrapat->id)}}">
                                             <i class="fas fa-eye"></i>
                                                         Lihat
-                                            </div>
+                                            </button>
                                         </td>
                                     </tr>
                                     @endforeach

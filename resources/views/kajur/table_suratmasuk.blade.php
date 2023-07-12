@@ -27,7 +27,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{route('kajur.dashboard')}}" class="nav-link ">
+            <a href="{{route('kajur.home')}}" class="nav-link ">
               <p>
                 Dashboard
               </p>
@@ -115,7 +115,7 @@
                                         <td>{{$smasuk->Disposisi}}</td>
                                         <td>{{$smasuk->Lampiran}}</td>
                                         <td>
-                                        <div class="btn btn-primary">
+                                        <div class="btn btn-primary" href="{{route('smasuk.show', $smasuk->id)}}">
                                             <i class="fas fa-eye"></i>
                                                         Lihat
                                             </div>

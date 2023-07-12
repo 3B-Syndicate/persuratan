@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-light">Dashboard Dosen</h1>
+            <h1 class="m-0 text-dark">Dashboard Dosen</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -26,7 +26,7 @@
 
                 <p>Surat Masuk</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('DosenSM.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -38,22 +38,12 @@
 
                 <p>Notulensi Rapat</p>
               </div>
-              <a href="#" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{route('DosenNR.view')}}" class="small-box-footer text-dark">Info Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
         </div>
-        <!-- /.row -->
         <!-- Main row -->
-
-        </div>
-        <!-- /.row (main row) -->
-        <div class="row justify-content-md-center" style="background: #ffc107;">
-          <div class="col-md-auto mb-3">
-            <a class="btn btn-primary" href="#" role="button">Unggah Surat</a>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
