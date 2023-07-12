@@ -173,8 +173,8 @@
                                                 <select name="tipe_rapat" id="tipe_rapat" class="form-control">
                                                     <option selected="">Pilih Tipe Rapat</option>
                                                     <option value="Rahasia">Rahasia</option>
-                                                    <option value="penting">Penting</option>
-                                                    <option value="biasa">Biasa</option>
+                                                    <option value="Penting">Penting</option>
+                                                    <option value="Biasa">Biasa</option>
                                                 </select>
                                             </div>
                                         </div>
